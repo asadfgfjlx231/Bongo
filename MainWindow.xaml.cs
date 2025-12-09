@@ -14,6 +14,12 @@ namespace Bongo
         public MainWindow()
         {
             InitializeComponent();
+            Browser.FrameLoadEnd += (sender, args) =>
+            {
+                args.Frame.ExecuteJavaScriptAsync("window.onerror = ()=>true;");
+                args.Frame.ExecuteJavaScriptAsync("console.error = ()=>{};");
+                args.Frame.ExecuteJavaScriptAsync("console.warn = ()=>{};");
+            };
 
             Browser.AddressChanged += Browser_AddressChanged;
         }
@@ -153,4 +159,5 @@ namespace Bongo
             catch { }
         }
     }
+
 }
