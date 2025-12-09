@@ -12,6 +12,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="40"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
         <!-- Felső eszköztár -->
@@ -40,7 +41,9 @@
 
         <!-- Chromium böngésző -->
         <cefSharp:ChromiumWebBrowser x:Name="Browser"
-                                     Grid.Row="1"
+                                     Grid.Row="2"
                                      Address="https://www.google.com"/>
+
+        <local:TabContent Grid.Row="1" x:Name="DefaultBrowser" Url="https://www.ebay.com"></local:TabContent>
     </Grid>
 </Window>

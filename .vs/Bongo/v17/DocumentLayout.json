@@ -1,0 +1,86 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Bongo\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{45559C8E-2A34-4450-97BF-1444E3D5E5AF}|Bongo.csproj|d:\\bongo\\tabcontent.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{45559C8E-2A34-4450-97BF-1444E3D5E5AF}|Bongo.csproj|solutionrelative:tabcontent.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45559C8E-2A34-4450-97BF-1444E3D5E5AF}|Bongo.csproj|d:\\bongo\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45559C8E-2A34-4450-97BF-1444E3D5E5AF}|Bongo.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45559C8E-2A34-4450-97BF-1444E3D5E5AF}|Bongo.csproj|d:\\bongo\\tabcontent.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
+      "RelativeMoniker": "D:0:0:{45559C8E-2A34-4450-97BF-1444E3D5E5AF}|Bongo.csproj|solutionrelative:tabcontent.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45559C8E-2A34-4450-97BF-1444E3D5E5AF}|Bongo.csproj|d:\\bongo\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{45559C8E-2A34-4450-97BF-1444E3D5E5AF}|Bongo.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TabContent.xaml",
+              "DocumentMoniker": "D:\\Bongo\\TabContent.xaml",
+              "RelativeDocumentMoniker": "TabContent.xaml",
+              "ToolTip": "D:\\Bongo\\TabContent.xaml",
+              "RelativeToolTip": "TabContent.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-12-09T12:58:24.332Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TabContent.xaml.cs",
+              "DocumentMoniker": "D:\\Bongo\\TabContent.xaml.cs",
+              "RelativeDocumentMoniker": "TabContent.xaml.cs",
+              "ToolTip": "D:\\Bongo\\TabContent.xaml.cs",
+              "RelativeToolTip": "TabContent.xaml.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAACsAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T12:58:02.555Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "D:\\Bongo\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "MainWindow.xaml",
+              "ToolTip": "D:\\Bongo\\MainWindow.xaml",
+              "RelativeToolTip": "MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-12-09T12:45:08.347Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "D:\\Bongo\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "MainWindow.xaml.cs",
+              "ToolTip": "D:\\Bongo\\MainWindow.xaml.cs",
+              "RelativeToolTip": "MainWindow.xaml.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T13:16:14.058Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
