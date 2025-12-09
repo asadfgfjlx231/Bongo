@@ -17,7 +17,7 @@ namespace Bongo
         MySqlConnection kapcsolat;
 
         public Adatbazis(string server = "localhost", 
-            string database = "users", string user = "root", string password = "")
+            string database = "bongoweb", string user = "root", string password = "")
         {
             kapcs_string = $"server={server};database={database};user={user};password={password};";
         }
