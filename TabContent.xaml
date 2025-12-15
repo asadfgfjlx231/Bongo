@@ -26,24 +26,24 @@
             <!-- left column-->
             <Grid>
                 <StackPanel HorizontalAlignment="Left" VerticalAlignment="Center" Orientation="Horizontal">
-                    <Button Height="25" Width="25" Padding="0" Margin="0,0,5,0" 
+                    <Button Height="35" Width="35" Padding="0" Margin="0,0,5,0" 
                     BorderBrush="Transparent" BorderThickness="0" Background="Transparent">
                         <Viewbox Width="20" Height="20" Margin="0 0 4 4 ">
                             <Path
                                 Data="{StaticResource BackBtnIcon}"
-                                Stroke="White"
+                                Stroke="#e8e8e8"
                                 StrokeThickness="2"
                                 StrokeLineJoin="Round"
                                 Fill="Transparent" 
                                 HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
                         </Viewbox>
                     </Button>
-                    <Button Height="25" Width="25" Padding="0" Margin="0,0,5,0" 
+                    <Button Height="35" Width="35" Padding="0" Margin="0,0,5,0" 
                     BorderBrush="Transparent" BorderThickness="0" Background="Transparent">
                         <Viewbox Width="20" Height="20"  Margin="0 0 4 4 ">
                             <Path
                                 Data="{StaticResource ForwardBtnIcon}"
-                                Stroke="White"
+                                Stroke="#e8e8e8"
                                 StrokeThickness="2"
                                 StrokeLineJoin="Round"
                                 Fill="Transparent" 
@@ -53,25 +53,25 @@
 
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-                    <Button Height="25" Width="25" Padding="0" Margin="0,0,5,0" 
+                    <Button Height="35" Width="35" Padding="0" Margin="0,0,5,0" 
                     BorderBrush="Transparent" BorderThickness="0" Background="Transparent">
                         <Viewbox Width="20" Height="20" Margin="0 0 1 1 ">
                             <Path
                                 Data="{StaticResource starBtnIcon}"
-                                Stroke="White"
+                                Stroke="#e8e8e8"
                                 StrokeThickness="2"
                                 StrokeLineJoin="Round"
                                 Fill="Transparent" 
                                 HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
                         </Viewbox>
                     </Button>
-                    <Button Height="25" Width="25" Padding="0" Margin="0,0,5,0" 
+                    <Button Height="35" Width="35" Padding="0" Margin="0,0,5,0" 
                     BorderBrush="Transparent" BorderThickness="0" Background="Transparent">
                         <Button.Content>
                             <Viewbox Width="20" Height="20"  Margin="0 0 1 1 ">
                                 <Path
                                 Data="{StaticResource homeBtnIcon}"
-                                Stroke="White"
+                                Stroke="#e8e8e8"
                                 StrokeThickness="2"
                                 StrokeLineJoin="Round"
                                 Fill="Transparent" 
@@ -91,7 +91,7 @@
             <Viewbox Width="20" Height="20" HorizontalAlignment="Right" Grid.Column="1" Margin="0,-3,10,0">
                 <Path
                     Data="{StaticResource searchBtnIcon}"
-                    Stroke="White"
+                    Stroke="#e8e8e8"
                     StrokeThickness="2"
                     StrokeLineJoin="Round"
                     Fill="Transparent" 
@@ -101,29 +101,29 @@
             <!-- right column-->
             <Grid Grid.Column="2">
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center">
-                    <Button Height="25" Width="25" Padding="0" Margin="0,0,5,0" 
+                    <Button Height="35" Width="35" Padding="0" Margin="0,0,5,0" 
                         BorderBrush="Transparent" BorderThickness="0" Background="Transparent">
                         <Button.Content>
                             <Viewbox Width="20" Height="20">
                                 <Path
                                 Data="{StaticResource refreshBtnIcon}"
-                                Stroke="White"
+                                Stroke="#e8e8e8"
                                 StrokeThickness="2"
                                 StrokeLineJoin="Round"
-                                Fill="White" 
+                                Fill="#e8e8e8" 
                                 HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
                             </Viewbox>
                         </Button.Content>
                     </Button>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-                    <Button Height="25" Width="25" Padding="0" Margin="0,0,5,0" 
+                    <Button Height="35" Width="35" Padding="0" Margin="0,0,5,0" 
                         BorderBrush="Transparent" BorderThickness="0" Background="Transparent">
                         <Button.Content>
                             <Viewbox Width="20" Height="20"  Margin="0 0 3 4 ">
                                 <Path
                                 Data="{StaticResource menuBtnIcon}"
-                                Stroke="White"
+                                Stroke="#e8e8e8"
                                 StrokeThickness="2"
                                 StrokeLineJoin="Round"
                                 Fill="Transparent" 

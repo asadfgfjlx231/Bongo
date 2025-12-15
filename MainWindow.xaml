@@ -7,7 +7,9 @@
         mc:Ignorable="d"
         xmlns:cefSharp="clr-namespace:CefSharp.Wpf;assembly=CefSharp.Wpf"
         Title="Mini Chromium Browser" Height="600" Width="900"
-        Background="#FF100E0E" Foreground="White">
+        Background="#FF100E0E" Foreground="White" MinWidth="700" MinHeight="500" WindowStyle="None" 
+        AllowsTransparency="True" WindowStartupLocation="CenterScreen"
+        >
     <Grid Margin="10">
         <Grid.RowDefinitions>
             <RowDefinition Height="40"/>
@@ -15,7 +17,6 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <!-- Felső eszköztár -->
         <DockPanel Grid.Row="0" LastChildFill="True">
             <Button Content="⟨" Width="35" Click="Back_Click"/>
             <Button Content="⟩" Width="35" Click="Forward_Click"/>
@@ -40,10 +41,11 @@
         </DockPanel>
 
         <!-- Chromium böngésző -->
-        <cefSharp:ChromiumWebBrowser x:Name="Browser"
+    <cefSharp:ChromiumWebBrowser x:Name="Browser"
                                      Grid.Row="2"
                                      Address="https://www.google.com"/>
+            
 
-        <local:TabContent Grid.Row="1" x:Name="DefaultBrowser" Url="https://www.ebay.com"></local:TabContent>
+    <local:TabContent Grid.Row="1" x:Name="DefaultBrowser" Url="https://www.ebay.com"></local:TabContent>
     </Grid>
 </Window>
