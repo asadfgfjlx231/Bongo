@@ -46,5 +46,22 @@
         L8.91,8.26
         Z
     </Geometry>
+    <Geometry x:Key="xBtnIcon">
+        M18,4
+        L4,18
+        M4,4
+        L18,18
+    </Geometry>
+    <Geometry x:Key="MinimizeBtnIcon">
+        M50,44.5c0,0.8-0.7,1.5-1.5,1.5h-45C2.7,46,2,45.3,2,44.5v-3C2,41.7,2.7,41,3.5,41h45
+        c0.8,0,1.5,0.7,1.5,1.5V44.5z
+    </Geometry>
+    <Geometry x:Key="MaximizeBtnIcon">
+        M3,3
+        L21,3
+        L21,21
+        L3,21
+        Z
+    </Geometry>
 
 </ResourceDictionary>

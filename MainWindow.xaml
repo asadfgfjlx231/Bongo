@@ -10,42 +10,97 @@
         Background="#FF100E0E" Foreground="White" MinWidth="700" MinHeight="500" WindowStyle="None" 
         AllowsTransparency="True" WindowStartupLocation="CenterScreen"
         >
-    <Grid Margin="10">
+    <WindowChrome.WindowChrome>
+        <WindowChrome CaptionHeight="55"/>
+    </WindowChrome.WindowChrome>
+
+    <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="40"/>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="1"/>
         </Grid.RowDefinitions>
+        <Grid Margin="10" Visibility="Collapsed">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
 
-        <DockPanel Grid.Row="0" LastChildFill="True">
-            <Button Content="⟨" Width="35" Click="Back_Click"/>
-            <Button Content="⟩" Width="35" Click="Forward_Click"/>
-            <Button Content="⟳" Width="35" Click="Reload_Click"/>
-            <Button Content="✖" Width="35" Click="Stop_Click"/>
+            <DockPanel Grid.Row="0" LastChildFill="True">
+                <Button Content="⟨" Width="35" Click="Back_Click"/>
+                <Button Content="⟩" Width="35" Click="Forward_Click"/>
+                <Button Content="⟳" Width="35" Click="Reload_Click"/>
+                <Button Content="✖" Width="35" Click="Stop_Click"/>
 
-            <TextBox x:Name="AddressBar"
-                     DockPanel.Dock="Right"
-                     FontSize="14"
-                     Margin="5,0,0,0"
-                     Padding="5"
-                     VerticalContentAlignment="Center"
-                     KeyDown="AddressBar_KeyDown"
-                     Background="#2d2d2d"
-                     Foreground="White"
-                     BorderBrush="#444"
-                     BorderThickness="1"/>
-            <Button Content="🔍"
-                    Width="40"
-                    Click="Go_Click"
-                    Margin="5,0,0,0"/>
-        </DockPanel>
+                <TextBox x:Name="AddressBar"
+                 DockPanel.Dock="Right"
+                 FontSize="14"
+                 Margin="5,0,0,0"
+                 Padding="5"
+                 VerticalContentAlignment="Center"
+                 KeyDown="AddressBar_KeyDown"
+                 Background="#2d2d2d"
+                 Foreground="White"
+                 BorderBrush="#444"
+                 BorderThickness="1"/>
+                <Button Content="🔍"
+                Width="40"
+                Click="Go_Click"
+                Margin="5,0,0,0"/>
+            </DockPanel>
 
-        <!-- Chromium böngésző -->
-    <cefSharp:ChromiumWebBrowser x:Name="Browser"
-                                     Grid.Row="2"
-                                     Address="https://www.google.com"/>
-            
+            <!-- Chromium böngésző -->
+            <cefSharp:ChromiumWebBrowser x:Name="Browser"
+                                 Grid.Row="2"
+                                 Address="https://www.google.com"/>
+        </Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="55"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
 
-    <local:TabContent Grid.Row="1" x:Name="DefaultBrowser" Url="https://www.ebay.com"></local:TabContent>
+            <Grid>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Top">
+                    <Button Width="32" Height="32" Background="Transparent" BorderBrush="Transparent">
+                        <Viewbox Width="16" Height="16" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0 0 0 12">
+                            <Path Data="{StaticResource MinimizeBtnIcon}"
+                                Stroke="#e8e8e8"
+                                StrokeThickness="2"
+                                StrokeLineJoin="Round"
+                                Fill="#e8e8e8" 
+                                HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Viewbox>
+                    </Button>
+                    <Button Width="32" Height="32" Background="Transparent" BorderBrush="Transparent">
+                        <Viewbox Width="16" Height="16" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <Path Data="{StaticResource MaximizeBtnIcon}"
+                                Stroke="#e8e8e8"
+                                StrokeThickness="2"
+                                StrokeLineJoin="Round"
+                                Fill="Transparent" 
+                                HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Viewbox>
+                    </Button>
+                    <Button Width="32" Height="32" Background="Transparent" BorderBrush="Transparent">
+                        <Viewbox Width="16" Height="16" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0 0 3 3">
+                            <Path Data="{StaticResource xBtnIcon}"
+                                Stroke="#e8e8e8"
+                                StrokeThickness="2"
+                                StrokeLineJoin="Round"
+                                Fill="Transparent" 
+                                HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Viewbox>
+                    </Button>
+                </StackPanel>
+            </Grid>
+
+            <TabControl x:Name="TabControl" Background="Transparent" BorderThickness="0"  Grid.Row="0" Grid.RowSpan="2">
+
+            </TabControl>
+        </Grid>
+
     </Grid>
+
+
 </Window>
