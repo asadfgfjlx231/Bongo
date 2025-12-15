@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         xmlns:cefSharp="clr-namespace:CefSharp.Wpf;assembly=CefSharp.Wpf"
         Title="Mini Chromium Browser" Height="600" Width="900"
-        Background="#1e1e1e" Foreground="White">
+        Background="#FF100E0E" Foreground="White">
     <Grid Margin="10">
         <Grid.RowDefinitions>
             <RowDefinition Height="40"/>
