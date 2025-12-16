@@ -61,9 +61,9 @@
             </Grid.RowDefinitions>
 
             <Grid>
-                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Top">
-                    <Button Width="32" Height="32" Background="Transparent" BorderBrush="Transparent">
-                        <Viewbox Width="16" Height="16" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0 0 0 12">
+                <StackPanel WindowChrome.IsHitTestVisibleInChrome="True" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Top">
+                    <Button Style="{StaticResource CaptionBtn}" x:Name="MinimizeBtn" Width="32" Height="32" Background="Transparent" BorderBrush="Transparent">
+                        <Viewbox Width="10" Height="10" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0 0 0 8">
                             <Path Data="{StaticResource MinimizeBtnIcon}"
                                 Stroke="#e8e8e8"
                                 StrokeThickness="2"
@@ -72,8 +72,8 @@
                                 HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </Viewbox>
                     </Button>
-                    <Button Width="32" Height="32" Background="Transparent" BorderBrush="Transparent">
-                        <Viewbox Width="16" Height="16" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Button Style="{DynamicResource CaptionBtn}" x:Name="MaximizeBtn" Width="32" Height="32" Background="Transparent" BorderBrush="Transparent">
+                        <Viewbox Width="10" Height="10" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0 0 1 1">
                             <Path Data="{StaticResource MaximizeBtnIcon}"
                                 Stroke="#e8e8e8"
                                 StrokeThickness="2"
@@ -82,8 +82,8 @@
                                 HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </Viewbox>
                     </Button>
-                    <Button Width="32" Height="32" Background="Transparent" BorderBrush="Transparent">
-                        <Viewbox Width="16" Height="16" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0 0 3 3">
+                    <Button Style="{DynamicResource CloseBtnStyle}" x:Name="CloseBtn" Width="32" Height="32" Background="Transparent" BorderBrush="Transparent">
+                        <Viewbox Width="10" Height="10" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0 0 2 2">
                             <Path Data="{StaticResource xBtnIcon}"
                                 Stroke="#e8e8e8"
                                 StrokeThickness="2"
@@ -95,9 +95,7 @@
                 </StackPanel>
             </Grid>
 
-            <TabControl x:Name="TabControl" Background="Transparent" BorderThickness="0"  Grid.Row="0" Grid.RowSpan="2">
 
-            </TabControl>
         </Grid>
 
     </Grid>
