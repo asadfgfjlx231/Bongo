@@ -178,16 +178,23 @@ namespace Bongo
             };
 
             MinimizeBtn.Click += (s, e) => WindowState = WindowState.Minimized;
-            MaximizeBtn.Click += (s, e) => WindowState = WindowState.Maximized;
+            MaximizeBtn.Click += (s, e) => WindowState = WindowState == WindowState.Maximized ? WindowState.Normal : WindowState.Maximized;
             
             CloseBtn.Click += (s, e) => this.Close();
             IntPtr hWnd = new WindowInteropHelper(GetWindow(this)).EnsureHandle();
             var attribute = DWMWINDOWATTRIBUTE.DWMWA_WINDOW_CORNER_PREFERENCE;
             var preference = DWM_WINDOW_CORNER_PREFERENCE.DWMWCP_ROUND;
 
+            DwmSetWindowAttribute(hWnd, attribute, ref preference, sizeof(uint));
+
 
             Browser.AddressChanged += Browser_AddressChanged;
         }
+
+        [DllImport("dwmapi.dll", CharSet = CharSet.Unicode, SetLastError = true)]
+        private static extern long DwmSetWindowAttribute(IntPtr hwnd, DWMWINDOWATTRIBUTE attribute,
+                                                        ref DWM_WINDOW_CORNER_PREFERENCE pvAttribute, uint cbAttribute);
+
 
         public enum DWMWINDOWATTRIBUTE
         {
@@ -263,6 +270,38 @@ namespace Bongo
             }
         }
 
+        private void Window_StateChanged(object sender, EventArgs e)
+        {
+            IntPtr hWnd = new WindowInteropHelper(GetWindow(this)).EnsureHandle();
+            MainWindow Current = this;
 
+            if (Current.WindowState != WindowState.Maximized)
+            {
+                var attribute = DWMWINDOWATTRIBUTE.DWMWA_WINDOW_CORNER_PREFERENCE;
+                var preference = DWM_WINDOW_CORNER_PREFERENCE.DWMWCP_ROUND;
+                DwmSetWindowAttribute(hWnd, attribute, ref preference, sizeof(uint));
+            }
+            else
+            {
+                var attribute = DWMWINDOWATTRIBUTE.DWMWA_WINDOW_CORNER_PREFERENCE;
+                var preference = DWM_WINDOW_CORNER_PREFERENCE.DWMWCP_DONOTROUND;
+                DwmSetWindowAttribute(hWnd, attribute, ref preference, sizeof(uint));
+            }
+
+        }
+
+        private void TabItem_PreviewMouseDown(object sender, MouseButtonEventArgs e)
+        {
+            e.Handled = true;
+
+            var newTab = new TabItem
+            {
+                Header = "Új lap",
+                Content = new TabContent()
+            };
+
+            TabControl.Items.Insert(TabControl.Items.Count - 1, newTab);
+            TabControl.SelectedItem = newTab;
+        }
     }
 }

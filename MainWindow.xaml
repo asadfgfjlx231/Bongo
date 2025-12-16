@@ -9,7 +9,7 @@
         Title="Mini Chromium Browser" Height="600" Width="900"
         Background="#FF100E0E" Foreground="White" MinWidth="700" MinHeight="500" WindowStyle="None" 
         AllowsTransparency="True" WindowStartupLocation="CenterScreen"
-        >
+        StateChanged="Window_StateChanged">
     <WindowChrome.WindowChrome>
         <WindowChrome CaptionHeight="55"/>
     </WindowChrome.WindowChrome>
@@ -54,13 +54,19 @@
                                  Grid.Row="2"
                                  Address="https://www.google.com"/>
         </Grid>
+
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="55"/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
 
-            <Grid>
+            <Grid Grid.Row="0"
+              Background="Transparent"
+              WindowChrome.IsHitTestVisibleInChrome="True"
+              Panel.ZIndex="0" Margin="0,0,0,15"/>
+
+            <Grid Panel.ZIndex="1024">
                 <StackPanel WindowChrome.IsHitTestVisibleInChrome="True" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Top">
                     <Button Style="{StaticResource CaptionBtn}" x:Name="MinimizeBtn" Width="32" Height="32" Background="Transparent" BorderBrush="Transparent">
                         <Viewbox Width="10" Height="10" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0 0 0 8">
@@ -95,6 +101,12 @@
                 </StackPanel>
             </Grid>
 
+            <TabControl WindowChrome.IsHitTestVisibleInChrome="True" x:Name="TabControl" Background="Transparent" BorderThickness="0" Grid.Row="0" Grid.RowSpan="2">
+                <TabItem HeaderTemplate="{DynamicResource TabHeaderTemplate}">
+                    <local:TabContent/>
+                </TabItem>
+                <TabItem Style="{DynamicResource NewTabItem}" x:Name="NewTabBtn" Header="+" PreviewMouseDown="TabItem_PreviewMouseDown"/>
+            </TabControl>
 
         </Grid>
 
