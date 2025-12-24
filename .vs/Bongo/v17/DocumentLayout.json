@@ -1,21 +1,21 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Joni\\Documents\\Bongo\\",
+  "WorkspaceRootPath": "C:\\Users\\Acer\\Documents\\GitHub\\Bongo\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{45559C8E-2A34-4450-97BF-1444E3D5E5AF}|Bongo.csproj|c:\\users\\joni\\documents\\bongo\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{45559C8E-2A34-4450-97BF-1444E3D5E5AF}|Bongo.csproj|c:\\users\\acer\\documents\\github\\bongo\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{45559C8E-2A34-4450-97BF-1444E3D5E5AF}|Bongo.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{45559C8E-2A34-4450-97BF-1444E3D5E5AF}|Bongo.csproj|C:\\Users\\Joni\\Documents\\Bongo\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{45559C8E-2A34-4450-97BF-1444E3D5E5AF}|Bongo.csproj|C:\\Users\\Acer\\Documents\\GitHub\\Bongo\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{45559C8E-2A34-4450-97BF-1444E3D5E5AF}|Bongo.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{45559C8E-2A34-4450-97BF-1444E3D5E5AF}|Bongo.csproj|C:\\Users\\Joni\\Documents\\Bongo\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{45559C8E-2A34-4450-97BF-1444E3D5E5AF}|Bongo.csproj|C:\\Users\\Acer\\Documents\\GitHub\\Bongo\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{45559C8E-2A34-4450-97BF-1444E3D5E5AF}|Bongo.csproj|solutionrelative:app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{45559C8E-2A34-4450-97BF-1444E3D5E5AF}|Bongo.csproj|c:\\users\\joni\\documents\\bongo\\templates\\datatemplates.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{45559C8E-2A34-4450-97BF-1444E3D5E5AF}|Bongo.csproj|C:\\Users\\Acer\\Documents\\GitHub\\Bongo\\templates\\datatemplates.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{45559C8E-2A34-4450-97BF-1444E3D5E5AF}|Bongo.csproj|solutionrelative:templates\\datatemplates.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
@@ -26,25 +26,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
-            },
-            {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\Joni\\Documents\\Bongo\\MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Acer\\Documents\\GitHub\\Bongo\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "MainWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\Joni\\Documents\\Bongo\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\Acer\\Documents\\GitHub\\Bongo\\MainWindow.xaml.cs",
               "RelativeToolTip": "MainWindow.xaml.cs",
-              "ViewState": "AgIAAAkBAAAAAAAAAAAwwCwBAAAOAAAAAAAAAA==",
+              "ViewState": "AgIAADMBAAAAAAAAAAAmwEsBAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-16T15:26:40.639Z",
               "EditorCaption": ""
@@ -53,9 +49,9 @@
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "DataTemplates.xaml",
-              "DocumentMoniker": "C:\\Users\\Joni\\Documents\\Bongo\\Templates\\DataTemplates.xaml",
+              "DocumentMoniker": "C:\\Users\\Acer\\Documents\\GitHub\\Bongo\\Templates\\DataTemplates.xaml",
               "RelativeDocumentMoniker": "Templates\\DataTemplates.xaml",
-              "ToolTip": "C:\\Users\\Joni\\Documents\\Bongo\\Templates\\DataTemplates.xaml",
+              "ToolTip": "C:\\Users\\Acer\\Documents\\GitHub\\Bongo\\Templates\\DataTemplates.xaml",
               "RelativeToolTip": "Templates\\DataTemplates.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-12-16T14:30:22.022Z",
@@ -65,9 +61,9 @@
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "App.xaml",
-              "DocumentMoniker": "C:\\Users\\Joni\\Documents\\Bongo\\App.xaml",
+              "DocumentMoniker": "C:\\Users\\Acer\\Documents\\GitHub\\Bongo\\App.xaml",
               "RelativeDocumentMoniker": "App.xaml",
-              "ToolTip": "C:\\Users\\Joni\\Documents\\Bongo\\App.xaml",
+              "ToolTip": "C:\\Users\\Acer\\Documents\\GitHub\\Bongo\\App.xaml",
               "RelativeToolTip": "App.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-12-15T09:57:26.905Z",
@@ -77,9 +73,9 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "MainWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\Joni\\Documents\\Bongo\\MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\Acer\\Documents\\GitHub\\Bongo\\MainWindow.xaml",
               "RelativeDocumentMoniker": "MainWindow.xaml",
-              "ToolTip": "C:\\Users\\Joni\\Documents\\Bongo\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\Acer\\Documents\\GitHub\\Bongo\\MainWindow.xaml",
               "RelativeToolTip": "MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-12-09T12:45:08.347Z",
