@@ -6,7 +6,6 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
-<<<<<<< HEAD
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
@@ -15,8 +14,7 @@ using CefSharp.Wpf;
 using System.Windows.Interop;
 using System.Runtime.InteropServices;
 using System.Windows.Media.Media3D;
-=======
->>>>>>> main
+
 
 namespace Bongo
 {
@@ -167,7 +165,6 @@ namespace Bongo
         public MainWindow()
         {
             InitializeComponent();
-<<<<<<< HEAD
 
             SourceInitialized += (s, e) =>
             {
@@ -186,15 +183,13 @@ namespace Bongo
             DwmSetWindowAttribute(hWnd, attribute, ref preference, sizeof(uint));
 
 
-=======
+
             Browser.FrameLoadEnd += (sender, args) =>
             {
                 args.Frame.ExecuteJavaScriptAsync("window.onerror = ()=>true;");
                 args.Frame.ExecuteJavaScriptAsync("console.error = ()=>{};");
                 args.Frame.ExecuteJavaScriptAsync("console.warn = ()=>{};");
             };
-
->>>>>>> main
             Browser.AddressChanged += Browser_AddressChanged;
         }
 
