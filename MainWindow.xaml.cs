@@ -297,11 +297,20 @@ namespace Bongo
             var newTab = new TabItem
             {
                 Header = "Új lap",
+                HeaderTemplate = (DataTemplate)Application.Current.Resources["TabHeaderTemplate"],
                 Content = new TabContent()
             };
 
             TabControl.Items.Insert(TabControl.Items.Count - 1, newTab);
             TabControl.SelectedItem = newTab;
+        }
+
+        private void DragBtn_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.ChangedButton == MouseButton.Left)
+            {
+                this.DragMove();
+            }
         }
     }
 }

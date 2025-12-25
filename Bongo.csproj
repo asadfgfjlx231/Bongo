@@ -69,6 +69,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="MinusConverter.cs" />
     <Compile Include="TabContent.xaml.cs">
       <DependentUpon>TabContent.xaml</DependentUpon>
     </Compile>

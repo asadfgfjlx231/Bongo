@@ -63,5 +63,22 @@
         L3,21
         Z
     </Geometry>
+    <Geometry x:Key="DragBtnIcon">
+        M12 12 L4 4
+          M4 4 V8
+          M4 4 H8
+          M12 12 L20 4
+          M20 4 V8
+          M20 4 H16
+          M12 12 L4 20
+          M4 20 V16
+          M4 20 H8
+          M12 12 L20 20
+          M20 20 V16
+          M20 20 H16
+    </Geometry>
+    <Geometry x:Key="CloseTabBtnIcon">
+        M 7.71875 6.28125 L 6.28125 7.71875 L 23.5625 25 L 6.28125 42.28125 L 7.71875 43.71875 L 25 26.4375 L 42.28125 43.71875 L 43.71875 42.28125 L 26.4375 25 L 43.71875 7.71875 L 42.28125 6.28125 L 25 23.5625 Z
+    </Geometry>
 
 </ResourceDictionary>

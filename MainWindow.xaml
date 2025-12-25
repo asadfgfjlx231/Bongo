@@ -67,7 +67,19 @@
               Panel.ZIndex="0" Margin="0,0,0,15"/>
 
             <Grid Panel.ZIndex="1024">
-                <StackPanel WindowChrome.IsHitTestVisibleInChrome="True" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Top">
+                <StackPanel Height="35" Background="#FF100E0E" WindowChrome.IsHitTestVisibleInChrome="True" Orientation="Horizontal" 
+                            HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0 0 0 0">
+                    <Border WindowChrome.IsHitTestVisibleInChrome="True"  x:Name="DragBtn" Width="32" Height="32"
+                            Background="Transparent" BorderBrush="Transparent" MouseDown="DragBtn_MouseDown">
+                        <Viewbox Width="12" Height="12" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0 0 2 2">
+                            <Path Data="{StaticResource DragBtnIcon}"
+                                Stroke="#e8e8e8"
+                                StrokeThickness="2"
+                                StrokeLineJoin="Round"
+                                Fill="#e8e8e8" 
+                                HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Viewbox>
+                    </Border>
                     <Button Style="{StaticResource CaptionBtn}" x:Name="MinimizeBtn" Width="32" Height="32" Background="Transparent" BorderBrush="Transparent">
                         <Viewbox Width="10" Height="10" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0 0 0 8">
                             <Path Data="{StaticResource MinimizeBtnIcon}"
@@ -101,7 +113,8 @@
                 </StackPanel>
             </Grid>
 
-            <TabControl WindowChrome.IsHitTestVisibleInChrome="True" x:Name="TabControl" Background="Transparent" BorderThickness="0" Grid.Row="0" Grid.RowSpan="2">
+            <TabControl WindowChrome.IsHitTestVisibleInChrome="True" x:Name="TabControl" Background="Transparent" 
+                        BorderThickness="0" Grid.Row="0" Grid.RowSpan="2">
                 <TabItem HeaderTemplate="{DynamicResource TabHeaderTemplate}">
                     <local:TabContent/>
                 </TabItem>

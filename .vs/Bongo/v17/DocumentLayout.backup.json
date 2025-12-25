@@ -1,21 +1,33 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Joni\\Documents\\Bongo\\",
+  "WorkspaceRootPath": "E:\\SULI\\BJ 2025-26\\PROJEKT\\Bongo\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{45559C8E-2A34-4450-97BF-1444E3D5E5AF}|Bongo.csproj|c:\\users\\joni\\documents\\bongo\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{45559C8E-2A34-4450-97BF-1444E3D5E5AF}|Bongo.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{45559C8E-2A34-4450-97BF-1444E3D5E5AF}|Bongo.csproj|C:\\Users\\Joni\\Documents\\Bongo\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{45559C8E-2A34-4450-97BF-1444E3D5E5AF}|Bongo.csproj|e:\\suli\\bj 2025-26\\projekt\\bongo\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{45559C8E-2A34-4450-97BF-1444E3D5E5AF}|Bongo.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{45559C8E-2A34-4450-97BF-1444E3D5E5AF}|Bongo.csproj|C:\\Users\\Joni\\Documents\\Bongo\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{45559C8E-2A34-4450-97BF-1444E3D5E5AF}|Bongo.csproj|E:\\SULI\\BJ 2025-26\\PROJEKT\\Bongo\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{45559C8E-2A34-4450-97BF-1444E3D5E5AF}|Bongo.csproj|solutionrelative:app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{45559C8E-2A34-4450-97BF-1444E3D5E5AF}|Bongo.csproj|c:\\users\\joni\\documents\\bongo\\templates\\datatemplates.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{45559C8E-2A34-4450-97BF-1444E3D5E5AF}|Bongo.csproj|E:\\SULI\\BJ 2025-26\\PROJEKT\\Bongo\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45559C8E-2A34-4450-97BF-1444E3D5E5AF}|Bongo.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45559C8E-2A34-4450-97BF-1444E3D5E5AF}|Bongo.csproj|E:\\SULI\\BJ 2025-26\\PROJEKT\\Bongo\\minusconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45559C8E-2A34-4450-97BF-1444E3D5E5AF}|Bongo.csproj|solutionrelative:minusconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45559C8E-2A34-4450-97BF-1444E3D5E5AF}|Bongo.csproj|E:\\SULI\\BJ 2025-26\\PROJEKT\\Bongo\\assets\\icons\\svg\\icons.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{45559C8E-2A34-4450-97BF-1444E3D5E5AF}|Bongo.csproj|solutionrelative:assets\\icons\\svg\\icons.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45559C8E-2A34-4450-97BF-1444E3D5E5AF}|Bongo.csproj|E:\\SULI\\BJ 2025-26\\PROJEKT\\Bongo\\tabcontent.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{45559C8E-2A34-4450-97BF-1444E3D5E5AF}|Bongo.csproj|solutionrelative:tabcontent.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45559C8E-2A34-4450-97BF-1444E3D5E5AF}|Bongo.csproj|E:\\SULI\\BJ 2025-26\\PROJEKT\\Bongo\\templates\\datatemplates.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{45559C8E-2A34-4450-97BF-1444E3D5E5AF}|Bongo.csproj|solutionrelative:templates\\datatemplates.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
@@ -26,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,36 +50,35 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\Joni\\Documents\\Bongo\\MainWindow.xaml.cs",
-              "RelativeDocumentMoniker": "MainWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\Joni\\Documents\\Bongo\\MainWindow.xaml.cs",
-              "RelativeToolTip": "MainWindow.xaml.cs",
-              "ViewState": "AgIAAAkBAAAAAAAAAAAwwCwBAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-16T15:26:40.639Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "DataTemplates.xaml",
-              "DocumentMoniker": "C:\\Users\\Joni\\Documents\\Bongo\\Templates\\DataTemplates.xaml",
-              "RelativeDocumentMoniker": "Templates\\DataTemplates.xaml",
-              "ToolTip": "C:\\Users\\Joni\\Documents\\Bongo\\Templates\\DataTemplates.xaml",
-              "RelativeToolTip": "Templates\\DataTemplates.xaml",
+              "Title": "MinusConverter.cs",
+              "DocumentMoniker": "E:\\SULI\\BJ 2025-26\\PROJEKT\\Bongo\\MinusConverter.cs",
+              "RelativeDocumentMoniker": "MinusConverter.cs",
+              "ToolTip": "E:\\SULI\\BJ 2025-26\\PROJEKT\\Bongo\\MinusConverter.cs",
+              "RelativeToolTip": "MinusConverter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-23T18:25:42.085Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "TabContent.xaml",
+              "DocumentMoniker": "E:\\SULI\\BJ 2025-26\\PROJEKT\\Bongo\\TabContent.xaml",
+              "RelativeDocumentMoniker": "TabContent.xaml",
+              "ToolTip": "E:\\SULI\\BJ 2025-26\\PROJEKT\\Bongo\\TabContent.xaml",
+              "RelativeToolTip": "TabContent.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-12-16T14:30:22.022Z",
+              "WhenOpened": "2025-12-23T18:01:10.091Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "App.xaml",
-              "DocumentMoniker": "C:\\Users\\Joni\\Documents\\Bongo\\App.xaml",
+              "DocumentMoniker": "E:\\SULI\\BJ 2025-26\\PROJEKT\\Bongo\\App.xaml",
               "RelativeDocumentMoniker": "App.xaml",
-              "ToolTip": "C:\\Users\\Joni\\Documents\\Bongo\\App.xaml",
+              "ToolTip": "E:\\SULI\\BJ 2025-26\\PROJEKT\\Bongo\\App.xaml",
               "RelativeToolTip": "App.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-12-15T09:57:26.905Z",
@@ -75,11 +86,47 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "E:\\SULI\\BJ 2025-26\\PROJEKT\\Bongo\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "MainWindow.xaml.cs",
+              "ToolTip": "E:\\SULI\\BJ 2025-26\\PROJEKT\\Bongo\\MainWindow.xaml.cs",
+              "RelativeToolTip": "MainWindow.xaml.cs",
+              "ViewState": "AgIAAPQAAAAAAAAAAAAAACsBAABiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-16T15:26:40.639Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "icons.xaml",
+              "DocumentMoniker": "E:\\SULI\\BJ 2025-26\\PROJEKT\\Bongo\\Assets\\Icons\\SVG\\icons.xaml",
+              "RelativeDocumentMoniker": "Assets\\Icons\\SVG\\icons.xaml",
+              "ToolTip": "E:\\SULI\\BJ 2025-26\\PROJEKT\\Bongo\\Assets\\Icons\\SVG\\icons.xaml",
+              "RelativeToolTip": "Assets\\Icons\\SVG\\icons.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-12-23T17:59:28.064Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "DataTemplates.xaml",
+              "DocumentMoniker": "E:\\SULI\\BJ 2025-26\\PROJEKT\\Bongo\\Templates\\DataTemplates.xaml",
+              "RelativeDocumentMoniker": "Templates\\DataTemplates.xaml",
+              "ToolTip": "E:\\SULI\\BJ 2025-26\\PROJEKT\\Bongo\\Templates\\DataTemplates.xaml",
+              "RelativeToolTip": "Templates\\DataTemplates.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-12-16T14:30:22.022Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "MainWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\Joni\\Documents\\Bongo\\MainWindow.xaml",
+              "DocumentMoniker": "E:\\SULI\\BJ 2025-26\\PROJEKT\\Bongo\\MainWindow.xaml",
               "RelativeDocumentMoniker": "MainWindow.xaml",
-              "ToolTip": "C:\\Users\\Joni\\Documents\\Bongo\\MainWindow.xaml",
+              "ToolTip": "E:\\SULI\\BJ 2025-26\\PROJEKT\\Bongo\\MainWindow.xaml",
               "RelativeToolTip": "MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-12-09T12:45:08.347Z",

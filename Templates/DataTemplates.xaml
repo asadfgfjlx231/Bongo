@@ -11,7 +11,6 @@
 
             <Image  Width="16" Height="16" HorizontalAlignment="Center" VerticalAlignment="Center"/>
             <TextBlock Text="New Document" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="14"  Grid.Column="1"/>
-            <Button Content="x" Grid.Column="2" Padding="0" Width="16" Height="16" Background="Transparent" BorderBrush="Transparent" BorderThickness="0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         </Grid>
     </DataTemplate>
 </ResourceDictionary>
