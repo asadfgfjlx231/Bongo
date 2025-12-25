@@ -1,4 +1,4 @@
-﻿using CefSharp;
+using CefSharp;
 using CefSharp.Wpf;
 using System;
 using System.Linq;
@@ -183,13 +183,13 @@ namespace Bongo
             DwmSetWindowAttribute(hWnd, attribute, ref preference, sizeof(uint));
 
 
-
             Browser.FrameLoadEnd += (sender, args) =>
             {
                 args.Frame.ExecuteJavaScriptAsync("window.onerror = ()=>true;");
                 args.Frame.ExecuteJavaScriptAsync("console.error = ()=>{};");
                 args.Frame.ExecuteJavaScriptAsync("console.warn = ()=>{};");
             };
+
             Browser.AddressChanged += Browser_AddressChanged;
         }
 
