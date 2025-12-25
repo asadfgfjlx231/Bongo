@@ -3,3 +3,6 @@ bin/
 obj/
 *.dll
 *.pbd
+/.vs/
+.vs/Bongo/v17/.suo
+.vs/Bongo/v17/DocumentLayout.json
