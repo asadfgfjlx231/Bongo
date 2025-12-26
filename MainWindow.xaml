@@ -116,7 +116,7 @@
             <TabControl WindowChrome.IsHitTestVisibleInChrome="True" x:Name="TabControl" Background="Transparent" 
                         BorderThickness="0" Grid.Row="0" Grid.RowSpan="2">
                 <TabItem HeaderTemplate="{DynamicResource TabHeaderTemplate}">
-                    <local:TabContent/>
+                   <local:TabContent/>
                 </TabItem>
                 <TabItem Style="{DynamicResource NewTabItem}" x:Name="NewTabBtn" Header="+" PreviewMouseDown="TabItem_PreviewMouseDown"/>
             </TabControl>

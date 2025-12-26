@@ -27,7 +27,7 @@
             <Grid>
                 <StackPanel HorizontalAlignment="Left" VerticalAlignment="Center" Orientation="Horizontal">
                     <Button Height="35" Width="35" Padding="0" Margin="0,0,5,0" 
-                    BorderBrush="Transparent" BorderThickness="0" Background="Transparent">
+                    BorderBrush="Transparent" BorderThickness="0" Background="Transparent" Click="Back_click">
                         <Viewbox Width="20" Height="20" Margin="0 0 4 4 ">
                             <Path
                                 Data="{StaticResource BackBtnIcon}"
@@ -38,7 +38,7 @@
                                 HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
                         </Viewbox>
                     </Button>
-                    <Button Height="35" Width="35" Padding="0" Margin="0,0,5,0" 
+                    <Button Click="Forward_Click" Height="35" Width="35" Padding="0" Margin="0,0,5,0" 
                     BorderBrush="Transparent" BorderThickness="0" Background="Transparent">
                         <Viewbox Width="20" Height="20"  Margin="0 0 4 4 ">
                             <Path
@@ -84,11 +84,11 @@
 
             <!-- centre column-->
 
-            <TextBox Grid.Column="1" Margin="5,12,5,12" Padding="12 7 30 0" Background="#FF272629">
+            <TextBox x:Name="AddressBar" Grid.Column="1" Margin="5,12,5,12" Padding="12 7 30 0" Background="#FF272629">
                 
             </TextBox>
             
-            <Viewbox Width="20" Height="20" HorizontalAlignment="Right" Grid.Column="1" Margin="0,-3,10,0">
+            <Viewbox MouseLeftButtonUp="Viewbox_MouseLeftButtonUp" Width="20" Height="20" HorizontalAlignment="Right" Grid.Column="1" Margin="0,-3,10,0">
                 <Path
                     Data="{StaticResource searchBtnIcon}"
                     Stroke="#e8e8e8"
@@ -101,8 +101,8 @@
             <!-- right column-->
             <Grid Grid.Column="2">
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center">
-                    <Button Height="35" Width="35" Padding="0" Margin="-3,0,0,0" 
-    BorderBrush="Transparent" BorderThickness="0" Background="Transparent">
+                    <Button Height="35" Width="35" Padding="0" Margin="-3,0,0,0" Click="Reload_Click"
+                        BorderBrush="Transparent" BorderThickness="0" Background="Transparent">
                         <Button.Content>
                             <Viewbox Width="20" Height="20">
                                 <Path
@@ -115,7 +115,7 @@
                             </Viewbox>
                         </Button.Content>
                     </Button>
-                    <Button Height="35" Width="35" Padding="0" Margin="0,0,0,0" 
+                    <Button Height="35" Width="35" Padding="0" Margin="0,0,0,0" Click="CLoseTab_Click"
                         BorderBrush="Transparent" BorderThickness="0" Background="Transparent">
                         <Button.Content>
                             <Viewbox Width="20" Height="20" Margin="0 0 3 3">
