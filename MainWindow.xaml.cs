@@ -182,13 +182,6 @@ namespace Bongo
 
             DwmSetWindowAttribute(hWnd, attribute, ref preference, sizeof(uint));
 
-
-            Browser.FrameLoadEnd += (sender, args) =>
-            {
-                args.Frame.ExecuteJavaScriptAsync("window.onerror = ()=>true;");
-                args.Frame.ExecuteJavaScriptAsync("console.error = ()=>{};");
-                args.Frame.ExecuteJavaScriptAsync("console.warn = ()=>{};");
-            };
         }
 
         [DllImport("dwmapi.dll", CharSet = CharSet.Unicode, SetLastError = true)]
@@ -242,7 +235,63 @@ namespace Bongo
 
             TabControl.Items.Insert(TabControl.Items.Count - 1, newTab);
             TabControl.SelectedItem = newTab;
+
+            newTab.Loaded += (s, ev) =>
+            {
+                var tabItem = (TabItem)s;
+                if (tabItem == null) return;
+
+                // Find the actual header content presenter in the TabControl visual tree
+                var header = TabControl.ItemContainerGenerator.ContainerFromItem(tabItem);
+                if (header == null) return;
+
+                var btn = FindChild<Button>(header, "CloseTabBtn");
+                if (btn != null)
+                {
+                    btn.Click += TabHeader_Close_Click;
+                }
+            };
         }
+
+        public static T FindChild<T>(DependencyObject parent, string name) where T : FrameworkElement
+        {
+            if (parent == null) return null;
+
+            for (int i = 0; i < VisualTreeHelper.GetChildrenCount(parent); i++)
+            {
+                var child = VisualTreeHelper.GetChild(parent, i);
+
+                if (child is T element && element.Name == name)
+                    return element;
+
+                var result = FindChild<T>(child, name);
+                if (result != null) return result;
+            }
+
+            return null;
+        }
+
+        public static T FindParent<T>(DependencyObject child) where T : FrameworkElement
+        {
+            DependencyObject parent = VisualTreeHelper.GetParent(child);
+            while (parent != null)
+            {
+                var typed = parent as T;
+                if (typed != null)
+                    return typed;
+
+                parent = VisualTreeHelper.GetParent(parent);
+            }
+            return null;
+        }
+
+
+        private void TabHeader_Close_Click(object sender, RoutedEventArgs e)
+        {
+            var tab = FindParent<TabItem>(sender as DependencyObject);
+            CloseTab(tab);
+        }
+
 
         private void DragBtn_MouseDown(object sender, MouseButtonEventArgs e)
         {
@@ -250,6 +299,61 @@ namespace Bongo
             {
                 this.DragMove();
             }
+        }
+
+        private void TabControl_PreviewMouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.ChangedButton == MouseButton.Middle)
+            {
+                var tab = FindParent<TabItem>(e.OriginalSource as DependencyObject);
+                if (tab != null && !ReferenceEquals(tab, NewTabBtn))
+                {
+                    CloseTab(tab);
+                    e.Handled = true;
+                }
+            }
+        }
+
+        private void CloseTab(TabItem tab)
+        {
+            if (tab == null) return;
+
+            int tabIndex = TabControl.Items.IndexOf(tab);
+
+            // Store the width before removing so it does NOT shrink
+            double storedWidth = tab.Width;
+
+            TabControl.Items.Remove(tab);
+
+            // Restore width if needed (optional safety)
+            if (tabIndex > 0 && tabIndex < TabControl.Items.Count)
+            {
+                var previousTab = TabControl.Items[tabIndex - 1] as TabItem;
+                if (previousTab != null)
+                {
+                    previousTab.Width = storedWidth;
+                    TabControl.SelectedItem = previousTab;
+                }
+            }
+            else
+            {
+                // Fallback: select last real tab before "+"
+                if (TabControl.Items.Count > 1)
+                {
+                    TabControl.SelectedItem = TabControl.Items[TabControl.Items.Count - 2];
+                }
+            }
+        }
+
+        private void TabHeaderScroll_MouseWheel(object sender, MouseWheelEventArgs e)
+        {
+            var sv = sender as ScrollViewer;
+            if (sv != null)
+            {
+                double newOffset = sv.HorizontalOffset - e.Delta;
+                sv.ScrollToHorizontalOffset(newOffset);
+            }
+            e.Handled = true;
         }
     }
 

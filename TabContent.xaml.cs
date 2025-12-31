@@ -29,6 +29,13 @@ namespace Bongo
                 return;
 
             Browser.AddressChanged += Browser_AddressChanged;
+
+            Browser.FrameLoadEnd += (sender, args) =>
+            {
+                args.Frame.ExecuteJavaScriptAsync("window.onerror = ()=>true;");
+                args.Frame.ExecuteJavaScriptAsync("console.error = ()=>{};");
+                args.Frame.ExecuteJavaScriptAsync("console.warn = ()=>{};");
+            };
         }
 
         private void Browser_AddressChanged(object sender, DependencyPropertyChangedEventArgs e)
@@ -128,7 +135,7 @@ namespace Bongo
 
         // Using a DependencyProperty as the backing store for Url.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty UrlProperty =
-            DependencyProperty.Register("Url", typeof(string), typeof(TabContent), new PropertyMetadata("https://www.bing.com"));
+            DependencyProperty.Register("Url", typeof(string), typeof(TabContent), new PropertyMetadata("https://www.google.com"));
 
         private void Browser_Initialized(object sender, EventArgs e)
         {
@@ -185,6 +192,13 @@ namespace Bongo
 
             tabControl.Items.Remove(tabItem);
         }
+
+        private void HomeBtn_Click(object sender, RoutedEventArgs e)
+        {
+            NavigateTo("google.com");
+        }
+
+
 
         /*
         private void Stop_Click(object sender, RoutedEventArgs e)

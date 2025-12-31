@@ -65,7 +65,7 @@
                                 HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
                         </Viewbox>
                     </Button>
-                    <Button Height="35" Width="35" Padding="0" Margin="0,0,5,0" 
+                    <Button Height="35" Width="35" Padding="0" Margin="0,0,5,0" Click="HomeBtn_Click"
                     BorderBrush="Transparent" BorderThickness="0" Background="Transparent">
                         <Button.Content>
                             <Viewbox Width="20" Height="20"  Margin="0 0 1 1 ">
@@ -84,10 +84,10 @@
 
             <!-- centre column-->
 
-            <TextBox x:Name="AddressBar" Grid.Column="1" Margin="5,12,5,12" Padding="12 7 30 0" Background="#FF272629">
-                
+            <TextBox x:Name="AddressBar" Grid.Column="1" Margin="5,12,5,12" Padding="12 7 30 0" Background="#FF272629" Foreground="#c2c2c2">
+
             </TextBox>
-            
+
             <Viewbox MouseLeftButtonUp="Viewbox_MouseLeftButtonUp" Width="20" Height="20" HorizontalAlignment="Right" Grid.Column="1" Margin="0,-3,10,0">
                 <Path
                     Data="{StaticResource searchBtnIcon}"
@@ -106,12 +106,12 @@
                         <Button.Content>
                             <Viewbox Width="20" Height="20">
                                 <Path
-            Data="{StaticResource refreshBtnIcon}"
-            Stroke="#e8e8e8"
-            StrokeThickness="2"
-            StrokeLineJoin="Round"
-            Fill="#e8e8e8" 
-            HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                                Data="{StaticResource refreshBtnIcon}"
+                                Stroke="#e8e8e8"
+                                StrokeThickness="2"
+                                StrokeLineJoin="Round"
+                                Fill="#e8e8e8" 
+                                HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
                             </Viewbox>
                         </Button.Content>
                     </Button>
@@ -148,12 +148,9 @@
                 </StackPanel>
             </Grid>
             <!--#endregion-->
-            
-            
+
+
         </Grid>
-
-        
-
-        <cefSharp:ChromiumWebBrowser x:Name="Browser" Grid.Row="1" Address="https://www.bing.com" Initialized="Browser_Initialized"></cefSharp:ChromiumWebBrowser>
+        <cefSharp:ChromiumWebBrowser x:Name="Browser" Grid.Row="1" Address="https://www.google.com" Initialized="Browser_Initialized"></cefSharp:ChromiumWebBrowser>
     </Grid>
 </UserControl>

@@ -497,27 +497,7 @@
 
                 <!-- In resources somewhere -->
             </Style>
-             <Style TargetType="{x:Type TabControl}"> 
-                 <Setter Property="Template"> 
-                     <Setter.Value> 
-                         <ControlTemplate TargetType="{x:Type TabControl}"> 
-                             <Grid> 
-                                 <Grid.RowDefinitions> 
-                                     <RowDefinition Height="Auto"/>
-                                     <RowDefinition Height="*"/>
-                                 </Grid.RowDefinitions> 
-                                 <ScrollViewer Grid.Row="0" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled" 
-                                               Focusable="False" Padding="0" ClipToBounds="True">
-                                    <Border ClipToBounds="True">
-                                        <TabPanel x:Name="HeaderPanel" ClipToBounds="True" IsItemsHost="True" Background="Transparent" Margin="0,0,160,0"/>
-                                    </Border>
-                                 </ScrollViewer> 
-                                 <ContentControl Grid.Row="1" Content="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=SelectedContent}" ContentTemplate="{TemplateBinding ContentTemplate}" ContentTemplateSelector="{TemplateBinding ContentTemplateSelector}" Margin="{TemplateBinding Padding}" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}"/>
-                             </Grid> 
-                         </ControlTemplate> 
-                     </Setter.Value>
-                 </Setter> 
-             </Style>
+
             
             <Style x:Key="CaptionBtn" TargetType="{x:Type Button}">
                 <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual2}"/>

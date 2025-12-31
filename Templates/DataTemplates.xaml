@@ -11,6 +11,12 @@
 
             <Image  Width="16" Height="16" HorizontalAlignment="Center" VerticalAlignment="Center"/>
             <TextBlock Text="New Document" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="14"  Grid.Column="1"/>
+            <Button Content="✕" x:Name="CloseTabBtn" Grid.Column="2"
+                Width="18" Height="18"
+                Background="Transparent"
+                Foreground="White"
+                BorderThickness="0"
+                Cursor="Hand"/>
         </Grid>
     </DataTemplate>
 </ResourceDictionary>
