@@ -14,7 +14,6 @@
         <SolidColorBrush x:Key="ScrollBackground" Color="#333439"/>
         <SolidColorBrush x:Key="ScrollThumb" Color="#9B9CA0"/>
         <SolidColorBrush x:Key="ScrollArrow" Color="#6B6C71"/>
-
         <Style TargetType="{x:Type TabControl}">
             <Setter Property="Template">
                 <Setter.Value>
@@ -139,12 +138,82 @@
                 </Trigger>
             </Style.Triggers>
         </Style>
+        <Style x:Key="CaptionBtn" TargetType="Button">
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Padding" Value="8,4"/>
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="border" Background="{TemplateBinding Background}" CornerRadius="4">
+                            <ContentPresenter Margin="{TemplateBinding Padding}" 
+                                      HorizontalAlignment="Left"
+                                      VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="#3a3a3a"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
     </Window.Resources>
     <WindowChrome.WindowChrome>
         <WindowChrome CaptionHeight="55"/>
     </WindowChrome.WindowChrome>
+    
+    
 
     <Grid>
+        <Popup x:Name="ChromeMenuPopup"
+           StaysOpen="False"
+           AllowsTransparency="True"
+           PopupAnimation="Fade"
+           Panel.ZIndex="9999"
+           Placement="Bottom">
+
+            <!-- THIS border must be the root element inside Popup -->
+            <Border Background="#252525"
+            CornerRadius="6"
+            Padding="4"
+            Width="180"
+            BorderBrush="#3a3a3a"
+            BorderThickness="1"
+            Cursor="Arrow">
+
+                <StackPanel>
+
+                    <Button Style="{StaticResource CaptionBtn}" Content="Új lap"/>
+                    <Button Style="{StaticResource CaptionBtn}" Content="Új ablak"/>
+                    <Button Style="{StaticResource CaptionBtn}" Content="Új inkognitólap"/>
+
+                    <Separator Margin="4" Background="#3a3a3a"/>
+
+                    <Button Style="{StaticResource CaptionBtn}" Content="Előzmények"/>
+                    <Button Style="{StaticResource CaptionBtn}" Content="Letöltések"/>
+                    <Button Style="{StaticResource CaptionBtn}" Content="Könyvjelzők"/>
+
+                    <Separator Margin="4" Background="#3a3a3a"/>
+
+                    <Button Style="{StaticResource CaptionBtn}" Content="Nagyítás +"/>
+                    <Button Style="{StaticResource CaptionBtn}" Content="Nagyítás −"/>
+                    <Button Style="{StaticResource CaptionBtn}" Content="Teljes képernyő"/>
+
+                    <Separator Margin="4" Background="#3a3a3a"/>
+
+                    <Button Style="{StaticResource CaptionBtn}" Content="Beállítások"/>
+                    <Button Style="{StaticResource CaptionBtn}" Content="Súgó"/>
+                    <Button Style="{StaticResource CaptionBtn}" Content="Kilépés"/>
+
+                </StackPanel>
+            </Border>
+        </Popup>
+
+
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="55"/>

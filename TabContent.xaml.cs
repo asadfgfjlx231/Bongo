@@ -61,7 +61,6 @@ namespace Bongo
 
             string url = input.Trim();
 
-            // 0) Speciális protokollok, amiket NEM módosítunk
             if (url.StartsWith("about:") ||
                 url.StartsWith("chrome:") ||
                 url.StartsWith("file:/"))
@@ -70,14 +69,12 @@ namespace Bongo
                 return;
             }
 
-            // 1) Ha már teljes URL (http, https, ftp)
             if (Uri.TryCreate(url, UriKind.Absolute, out Uri absoluteUri))
             {
                 Browser.Address = absoluteUri.ToString();
                 return;
             }
 
-            // 2) Ha domain, IP vagy localhost TLD ellenőrzés nélkül
             bool looksLikeHost =
                 url.Contains('.') ||
                 url.StartsWith("localhost") ||
@@ -85,18 +82,16 @@ namespace Bongo
 
             if (looksLikeHost)
             {
-                // Ékezetes domain támogatás (IDN)
                 try
                 {
                     var idn = new System.Globalization.IdnMapping();
                     string host = idn.GetAscii(url);
                     url = host;
                 }
-                catch { /* ha nem konvertálható, átugorjuk */ }
+                catch {}
 
                 string https = "https://" + url;
 
-                // Ellenőrizzük: működik-e HTTPS
                 if (await UrlExists(https))
                     Browser.Address = https;
                 else
@@ -105,14 +100,12 @@ namespace Bongo
                 return;
             }
 
-            // 3) Ha nem URL → Google keresés
             string query = System.Net.WebUtility.UrlEncode(input);
             Browser.Address = "https://www.google.com/search?q=" + query;
         }
 
 
 
-        // ✔ Gyors URL létezésteszt
         private async Task<bool> UrlExists(string url)
         {
             try
@@ -133,7 +126,6 @@ namespace Bongo
             set { SetValue(UrlProperty, value); }
         }
 
-        // Using a DependencyProperty as the backing store for Url.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty UrlProperty =
             DependencyProperty.Register("Url", typeof(string), typeof(TabContent), new PropertyMetadata("https://www.google.com"));
 
@@ -197,6 +189,14 @@ namespace Bongo
         {
             NavigateTo("google.com");
         }
+
+        private void MenuBtn_Click(object sender, RoutedEventArgs e)
+        {
+            var parent = Window.GetWindow(this) as MainWindow;
+            parent?.OpenChromeMenu(sender as UIElement);
+
+        }
+
 
 
 

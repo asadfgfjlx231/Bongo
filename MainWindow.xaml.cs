@@ -14,6 +14,7 @@ using System.Windows.Interop;
 using System.Runtime.InteropServices;
 using System.Windows.Media.Media3D;
 using System.Windows.Controls;
+using Org.BouncyCastle.Asn1.X509;
 
 
 namespace Bongo
@@ -174,7 +175,7 @@ namespace Bongo
 
             MinimizeBtn.Click += (s, e) => WindowState = WindowState.Minimized;
             MaximizeBtn.Click += (s, e) => WindowState = WindowState == WindowState.Maximized ? WindowState.Normal : WindowState.Maximized;
-            
+
             CloseBtn.Click += (s, e) => this.Close();
             IntPtr hWnd = new WindowInteropHelper(GetWindow(this)).EnsureHandle();
             var attribute = DWMWINDOWATTRIBUTE.DWMWA_WINDOW_CORNER_PREFERENCE;
@@ -355,6 +356,14 @@ namespace Bongo
             }
             e.Handled = true;
         }
-    }
+        public void OpenChromeMenu(UIElement target)
+        {
+            ChromeMenuPopup.PlacementTarget = target;
+            ChromeMenuPopup.Placement = System.Windows.Controls.Primitives.PlacementMode.Bottom;
+            ChromeMenuPopup.HorizontalOffset = 0;
+            ChromeMenuPopup.VerticalOffset = 4;
+            ChromeMenuPopup.IsOpen = true;
+        }
 
+    }
 }
