@@ -13,27 +13,27 @@
         </Label>
 
         
-        <Label Margin="10, 70, 280, 0" VerticalAlignment="Top" Height="30" VerticalContentAlignment="Center"
+        <Label Margin="10, 70, 270, 0" VerticalAlignment="Top" Height="30" VerticalContentAlignment="Center"
                FontWeight="Bold" FontSize="14" HorizontalContentAlignment="Center">
             Felhaszálónév:
         </Label>
-        <TextBox x:Name="usernameInput" VerticalAlignment="Top" Margin="120, 70, 10, 0" Height="30"
+        <TextBox x:Name="usernameInput" VerticalAlignment="Top" Margin="130, 70, 10, 0" Height="30"
                  VerticalContentAlignment="Center"></TextBox>
         
-        <Label Margin="10, 120, 280, 0" VerticalAlignment="Top" Height="30" VerticalContentAlignment="Center"
+        <Label Margin="10, 120, 270, 0" VerticalAlignment="Top" Height="30" VerticalContentAlignment="Center"
                FontWeight="Bold" FontSize="14" HorizontalContentAlignment="Center">
             Jelszó:
         </Label>
-        <TextBox x:Name="passwordInput" VerticalAlignment="Top" Margin="120, 120, 10, 0" Height="30"
+        <TextBox x:Name="passwordInput" VerticalAlignment="Top" Margin="130, 120, 10, 0" Height="30"
                  VerticalContentAlignment="Center"></TextBox>
 
-        <Button VerticalAlignment="Top" Margin="10, 170, 10, 0" Height="40" FontWeight="Bold" FontSize="24"
-                VerticalContentAlignment="Center" Background="Orange">
+        <Button x:Name="bej_btn" VerticalAlignment="Top" Margin="10, 170, 10, 0" Height="40" FontWeight="Bold" FontSize="24"
+                VerticalContentAlignment="Center" Background="Orange" Click="bej_btn_Click">
             Bejelentkezés
         </Button>
         
-        <Button VerticalAlignment="Top" Margin="10, 230, 10, 0" Height="40" FontWeight="Bold" FontSize="24"
-                VerticalContentAlignment="Center" Background="Orange">
+        <Button x:Name="reg_btn" VerticalAlignment="Top" Margin="10, 230, 10, 0" Height="40" FontWeight="Bold" FontSize="24"
+                VerticalContentAlignment="Center" Background="Orange" Click="reg_btn_Click">
             Regisztráció
         </Button>
     </Grid>

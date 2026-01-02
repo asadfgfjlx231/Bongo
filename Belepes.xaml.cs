@@ -23,5 +23,41 @@ namespace Bongo
         {
             InitializeComponent();
         }
+
+        private void reg_btn_Click(object sender, RoutedEventArgs e)
+        {
+            Regisztracio regisztracioAblak = new Regisztracio();
+            regisztracioAblak.Show();
+            Hide();
+            Close();
+        }
+
+        private void bej_btn_Click(object sender, RoutedEventArgs e)
+        {
+            string username = usernameInput.Text;
+            string password = passwordInput.Text;
+
+            if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
+            {
+                MessageBox.Show("Minden mezőt ki kell tölteni!!!");
+                return;
+            }
+
+            if (false) // Ha nem létezik a felhasználó az adatbázisban
+            {
+                MessageBox.Show("Ilyen nevű felhasználó nem létezik!!!");
+                return;
+            }
+
+            if (false) // Ha nem jó a jelszó
+            {
+                MessageBox.Show("Hibás a jelszó!!!");
+                return;
+            }
+
+            MainWindow ablak = new MainWindow(); // Jövőbeli paraméter: felhasználó id-je
+            ablak.Show();
+            Hide();
+        }
     }
 }
