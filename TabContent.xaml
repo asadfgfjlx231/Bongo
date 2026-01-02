@@ -84,7 +84,7 @@
 
             <!-- centre column-->
 
-            <TextBox x:Name="AddressBar" Grid.Column="1" Margin="5,12,5,12" Padding="12 7 30 0" Background="#FF272629" Foreground="#c2c2c2">
+            <TextBox x:Name="AddressBar" Grid.Column="1" Margin="5,12,5,12" Padding="12 7 30 0" Background="#FF272629" Foreground="#c2c2c2" KeyDown="AddressBar_KeyDown">
 
             </TextBox>
 
@@ -115,20 +115,7 @@
                             </Viewbox>
                         </Button.Content>
                     </Button>
-                    <Button Height="35" Width="35" Padding="0" Margin="0,0,0,0" Click="CLoseTab_Click"
-                        BorderBrush="Transparent" BorderThickness="0" Background="Transparent">
-                        <Button.Content>
-                            <Viewbox Width="20" Height="20" Margin="0 0 3 3">
-                                <Path
-                                Data="{StaticResource CloseTabBtnIcon}"
-                                Stroke="#e8e8e8"
-                                StrokeThickness="2"
-                                StrokeLineJoin="Round"
-                                Fill="#e8e8e8" 
-                                HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
-                            </Viewbox>
-                        </Button.Content>
-                    </Button>
+                  
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
                     <Button Height="35" Width="35" Padding="0" Margin="0,0,5,0" x:Name="MenuBtn" Click="MenuBtn_Click"
