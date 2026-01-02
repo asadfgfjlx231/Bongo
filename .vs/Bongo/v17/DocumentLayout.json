@@ -3,28 +3,12 @@
   "WorkspaceRootPath": "C:\\AdatokPetie\\Suli\\12.osztaly\\Projekt\\2.projekt\\Bongo\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{45559C8E-2A34-4450-97BF-1444E3D5E5AF}|Bongo.csproj|C:\\AdatokPetie\\Suli\\12.osztaly\\Projekt\\2.projekt\\Bongo\\regisztracio.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{45559C8E-2A34-4450-97BF-1444E3D5E5AF}|Bongo.csproj|solutionrelative:regisztracio.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{45559C8E-2A34-4450-97BF-1444E3D5E5AF}|Bongo.csproj|c:\\adatokpetie\\suli\\12.osztaly\\projekt\\2.projekt\\bongo\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{45559C8E-2A34-4450-97BF-1444E3D5E5AF}|Bongo.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{45559C8E-2A34-4450-97BF-1444E3D5E5AF}|Bongo.csproj|C:\\AdatokPetie\\Suli\\12.osztaly\\Projekt\\2.projekt\\Bongo\\belepes.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{45559C8E-2A34-4450-97BF-1444E3D5E5AF}|Bongo.csproj|solutionrelative:belepes.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{45559C8E-2A34-4450-97BF-1444E3D5E5AF}|Bongo.csproj|c:\\adatokpetie\\suli\\12.osztaly\\projekt\\2.projekt\\bongo\\adatbazis.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{45559C8E-2A34-4450-97BF-1444E3D5E5AF}|Bongo.csproj|solutionrelative:adatbazis.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{45559C8E-2A34-4450-97BF-1444E3D5E5AF}|Bongo.csproj|C:\\AdatokPetie\\Suli\\12.osztaly\\Projekt\\2.projekt\\Bongo\\regisztracio.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{45559C8E-2A34-4450-97BF-1444E3D5E5AF}|Bongo.csproj|solutionrelative:regisztracio.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{45559C8E-2A34-4450-97BF-1444E3D5E5AF}|Bongo.csproj|C:\\AdatokPetie\\Suli\\12.osztaly\\Projekt\\2.projekt\\Bongo\\belepes.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{45559C8E-2A34-4450-97BF-1444E3D5E5AF}|Bongo.csproj|solutionrelative:belepes.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{45559C8E-2A34-4450-97BF-1444E3D5E5AF}|Bongo.csproj|C:\\AdatokPetie\\Suli\\12.osztaly\\Projekt\\2.projekt\\Bongo\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{45559C8E-2A34-4450-97BF-1444E3D5E5AF}|Bongo.csproj|solutionrelative:app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{45559C8E-2A34-4450-97BF-1444E3D5E5AF}|Bongo.csproj|c:\\adatokpetie\\suli\\12.osztaly\\projekt\\2.projekt\\bongo\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45559C8E-2A34-4450-97BF-1444E3D5E5AF}|Bongo.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,75 +26,27 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Adatbazis.cs",
-              "DocumentMoniker": "C:\\AdatokPetie\\Suli\\12.osztaly\\Projekt\\2.projekt\\Bongo\\Adatbazis.cs",
-              "RelativeDocumentMoniker": "Adatbazis.cs",
-              "ToolTip": "C:\\AdatokPetie\\Suli\\12.osztaly\\Projekt\\2.projekt\\Bongo\\Adatbazis.cs",
-              "RelativeToolTip": "Adatbazis.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAFAAAAAAAAAA",
+              "DocumentIndex": 1,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\AdatokPetie\\Suli\\12.osztaly\\Projekt\\2.projekt\\Bongo\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "MainWindow.xaml.cs",
+              "ToolTip": "C:\\AdatokPetie\\Suli\\12.osztaly\\Projekt\\2.projekt\\Bongo\\MainWindow.xaml.cs",
+              "RelativeToolTip": "MainWindow.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-30T12:03:50.782Z",
+              "WhenOpened": "2026-01-02T13:05:26.794Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Regisztracio.xaml.cs",
-              "DocumentMoniker": "C:\\AdatokPetie\\Suli\\12.osztaly\\Projekt\\2.projekt\\Bongo\\Regisztracio.xaml.cs",
-              "RelativeDocumentMoniker": "Regisztracio.xaml.cs",
-              "ToolTip": "C:\\AdatokPetie\\Suli\\12.osztaly\\Projekt\\2.projekt\\Bongo\\Regisztracio.xaml.cs",
-              "RelativeToolTip": "Regisztracio.xaml.cs",
-              "ViewState": "AQIAABMAAAAAAAAAAAAmwC0AAAA8AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-30T10:58:53.177Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Regisztracio.xaml",
-              "DocumentMoniker": "C:\\AdatokPetie\\Suli\\12.osztaly\\Projekt\\2.projekt\\Bongo\\Regisztracio.xaml",
-              "RelativeDocumentMoniker": "Regisztracio.xaml",
-              "ToolTip": "C:\\AdatokPetie\\Suli\\12.osztaly\\Projekt\\2.projekt\\Bongo\\Regisztracio.xaml",
-              "RelativeToolTip": "Regisztracio.xaml",
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\AdatokPetie\\Suli\\12.osztaly\\Projekt\\2.projekt\\Bongo\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "MainWindow.xaml",
+              "ToolTip": "C:\\AdatokPetie\\Suli\\12.osztaly\\Projekt\\2.projekt\\Bongo\\MainWindow.xaml",
+              "RelativeToolTip": "MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-12-30T10:55:29.421Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Belepes.xaml.cs",
-              "DocumentMoniker": "C:\\AdatokPetie\\Suli\\12.osztaly\\Projekt\\2.projekt\\Bongo\\Belepes.xaml.cs",
-              "RelativeDocumentMoniker": "Belepes.xaml.cs",
-              "ToolTip": "C:\\AdatokPetie\\Suli\\12.osztaly\\Projekt\\2.projekt\\Bongo\\Belepes.xaml.cs",
-              "RelativeToolTip": "Belepes.xaml.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAADsAAAATAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-30T10:50:08.48Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Belepes.xaml",
-              "DocumentMoniker": "C:\\AdatokPetie\\Suli\\12.osztaly\\Projekt\\2.projekt\\Bongo\\Belepes.xaml",
-              "RelativeDocumentMoniker": "Belepes.xaml",
-              "ToolTip": "C:\\AdatokPetie\\Suli\\12.osztaly\\Projekt\\2.projekt\\Bongo\\Belepes.xaml",
-              "RelativeToolTip": "Belepes.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-12-30T10:49:17.058Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "App.xaml",
-              "DocumentMoniker": "C:\\AdatokPetie\\Suli\\12.osztaly\\Projekt\\2.projekt\\Bongo\\App.xaml",
-              "RelativeDocumentMoniker": "App.xaml",
-              "ToolTip": "C:\\AdatokPetie\\Suli\\12.osztaly\\Projekt\\2.projekt\\Bongo\\App.xaml",
-              "RelativeToolTip": "App.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-12-28T13:28:14.605Z",
+              "WhenOpened": "2026-01-02T12:57:04.418Z",
               "EditorCaption": ""
             }
           ]

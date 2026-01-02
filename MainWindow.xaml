@@ -7,40 +7,213 @@
         mc:Ignorable="d"
         xmlns:cefSharp="clr-namespace:CefSharp.Wpf;assembly=CefSharp.Wpf"
         Title="Mini Chromium Browser" Height="600" Width="900"
-        Background="#1e1e1e" Foreground="White">
-    <Grid Margin="10">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="40"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
+        Background="#FF100E0E" Foreground="White" MinWidth="700" MinHeight="500" WindowStyle="None" 
+        AllowsTransparency="True" WindowStartupLocation="CenterScreen"
+        StateChanged="Window_StateChanged">
+    <Window.Resources>
+        <SolidColorBrush x:Key="ScrollBackground" Color="#333439"/>
+        <SolidColorBrush x:Key="ScrollThumb" Color="#9B9CA0"/>
+        <SolidColorBrush x:Key="ScrollArrow" Color="#6B6C71"/>
 
-        <!-- Felső eszköztár -->
-        <DockPanel Grid.Row="0" LastChildFill="True">
-            <Button Content="⟨" Width="35" Click="Back_Click"/>
-            <Button Content="⟩" Width="35" Click="Forward_Click"/>
-            <Button Content="⟳" Width="35" Click="Reload_Click"/>
-            <Button Content="✖" Width="35" Click="Stop_Click"/>
+        <Style TargetType="{x:Type TabControl}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type TabControl}">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <ScrollViewer Grid.Row="0"
+                                      Background="{TemplateBinding Background}"
+                                      BorderThickness="0"
+                                      HorizontalScrollBarVisibility="Auto"
+                                      VerticalScrollBarVisibility="Disabled"
+                                      PreviewMouseWheel="TabHeaderScroll_MouseWheel"
+                                      Focusable="False">
+                                <Border ClipToBounds="True" Background="Transparent">
+                                    <TabPanel x:Name="HeaderPanel" IsItemsHost="True" Margin="0,0,160,0"/>
+                                </Border>
+                            </ScrollViewer>
+                            <ContentControl Grid.Row="1" Content="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=SelectedContent}"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
 
-            <TextBox x:Name="AddressBar"
-                     DockPanel.Dock="Right"
-                     FontSize="14"
-                     Margin="5,0,0,0"
-                     Padding="5"
-                     VerticalContentAlignment="Center"
-                     KeyDown="AddressBar_KeyDown"
-                     Background="#2d2d2d"
-                     Foreground="White"
-                     BorderBrush="#444"
-                     BorderThickness="1"/>
-            <Button Content="🔍"
-                    Width="40"
-                    Click="Go_Click"
-                    Margin="5,0,0,0"/>
-        </DockPanel>
+        <Style TargetType="{x:Type ScrollBar}">
+            <Setter Property="Background" Value="{StaticResource ScrollBackground}"/>
+            <Setter Property="Width" Value="14"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type ScrollBar}">
+                        <Grid Background="Transparent">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="15"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="15"/>
+                            </Grid.RowDefinitions>
 
-        <!-- Chromium böngésző -->
-        <cefSharp:ChromiumWebBrowser x:Name="Browser"
-                                     Grid.Row="1"
-                                     Address="https://www.google.com"/>
+                            <Border Grid.RowSpan="3" Background="{TemplateBinding Background}" CornerRadius="7" />
+
+                            <RepeatButton Grid.Row="0" Command="{x:Static ScrollBar.LineUpCommand}" Background="Transparent" BorderThickness="0">
+                                <RepeatButton.Template>
+                                    <ControlTemplate TargetType="RepeatButton">
+                                        <Path Data="M 0 4 L 4 0 L 8 4 Z" Fill="{StaticResource ScrollArrow}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </ControlTemplate>
+                                </RepeatButton.Template>
+                            </RepeatButton>
+
+                            <Track x:Name="PART_Track" Grid.Row="1" IsDirectionReversed="true">
+                                <Track.Thumb>
+                                    <Thumb>
+                                        <Thumb.Template>
+                                            <ControlTemplate TargetType="{x:Type Thumb}">
+                                                <Border Background="{StaticResource ScrollThumb}" CornerRadius="6" Margin="2,0" MinHeight="20"/>
+                                            </ControlTemplate>
+                                        </Thumb.Template>
+                                    </Thumb>
+                                </Track.Thumb>
+                            </Track>
+
+                            <RepeatButton Grid.Row="2" Command="{x:Static ScrollBar.LineDownCommand}" Background="Transparent" BorderThickness="0">
+                                <RepeatButton.Template>
+                                    <ControlTemplate TargetType="RepeatButton">
+                                        <Path Data="M 0 0 L 4 4 L 8 0 Z" Fill="{StaticResource ScrollArrow}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </ControlTemplate>
+                                </RepeatButton.Template>
+                            </RepeatButton>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+
+            <Style.Triggers>
+                <Trigger Property="Orientation" Value="Horizontal">
+                    <Setter Property="Width" Value="Auto"/>
+                    <Setter Property="Height" Value="14"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type ScrollBar}">
+                                <Grid Background="Transparent">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="15"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="15"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <Border Grid.ColumnSpan="3" Background="{TemplateBinding Background}" CornerRadius="7" />
+
+                                    <RepeatButton Grid.Column="0" Command="{x:Static ScrollBar.LineLeftCommand}" Background="Transparent" BorderThickness="0" Margin="5,0,0,0">
+                                        <RepeatButton.Template>
+                                            <ControlTemplate TargetType="RepeatButton">
+                                                <Path Data="M 4 0 L 0 4 L 4 8 Z" Fill="{StaticResource ScrollArrow}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                            </ControlTemplate>
+                                        </RepeatButton.Template>
+                                    </RepeatButton>
+
+                                    <Track x:Name="PART_Track" Grid.Column="1" IsDirectionReversed="False" Margin="5,0,5,0">
+                                        <Track.Thumb>
+                                            <Thumb>
+                                                <Thumb.Template>
+                                                    <ControlTemplate TargetType="{x:Type Thumb}">
+                                                        <Border Background="{StaticResource ScrollThumb}" CornerRadius="6" Margin="0,2" MinWidth="30"/>
+                                                    </ControlTemplate>
+                                                </Thumb.Template>
+                                            </Thumb>
+                                        </Track.Thumb>
+                                    </Track>
+
+                                    <RepeatButton Grid.Column="2" Command="{x:Static ScrollBar.LineRightCommand}" Background="Transparent" BorderThickness="0">
+                                        <RepeatButton.Template>
+                                            <ControlTemplate TargetType="RepeatButton">
+                                                <Path Data="M 0 0 L 4 4 L 0 8 Z" Fill="{StaticResource ScrollArrow}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,5,0"/>
+                                            </ControlTemplate>
+                                        </RepeatButton.Template>
+                                    </RepeatButton>
+                                </Grid>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+    <WindowChrome.WindowChrome>
+        <WindowChrome CaptionHeight="55"/>
+    </WindowChrome.WindowChrome>
+
+    <Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="55"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0"
+              Background="Transparent"
+              WindowChrome.IsHitTestVisibleInChrome="True"
+              Panel.ZIndex="0" Margin="0,0,0,15"/>
+
+            <Grid Panel.ZIndex="1024">
+                <StackPanel Height="35" Background="#FF100E0E" WindowChrome.IsHitTestVisibleInChrome="True" Orientation="Horizontal" 
+                            HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0 0 0 0">
+                    <Border WindowChrome.IsHitTestVisibleInChrome="True"  x:Name="DragBtn" Width="32" Height="32"
+                            Background="Transparent" BorderBrush="Transparent" MouseDown="DragBtn_MouseDown">
+                        <Viewbox Width="12" Height="12" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0 0 2 2">
+                            <Path Data="{StaticResource DragBtnIcon}"
+                                Stroke="#e8e8e8"
+                                StrokeThickness="2"
+                                StrokeLineJoin="Round"
+                                Fill="#e8e8e8" 
+                                HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Viewbox>
+                    </Border>
+                    <Button Style="{StaticResource CaptionBtn}" x:Name="MinimizeBtn" Width="32" Height="32" Background="Transparent" BorderBrush="Transparent">
+                        <Viewbox Width="10" Height="10" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0 0 0 8">
+                            <Path Data="{StaticResource MinimizeBtnIcon}"
+                                Stroke="#e8e8e8"
+                                StrokeThickness="2"
+                                StrokeLineJoin="Round"
+                                Fill="#e8e8e8" 
+                                HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Viewbox>
+                    </Button>
+                    <Button Style="{DynamicResource CaptionBtn}" x:Name="MaximizeBtn" Width="32" Height="32" Background="Transparent" BorderBrush="Transparent">
+                        <Viewbox Width="10" Height="10" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0 0 1 1">
+                            <Path Data="{StaticResource MaximizeBtnIcon}"
+                                Stroke="#e8e8e8"
+                                StrokeThickness="2"
+                                StrokeLineJoin="Round"
+                                Fill="Transparent" 
+                                HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Viewbox>
+                    </Button>
+                    <Button Style="{DynamicResource CloseBtnStyle}" x:Name="CloseBtn" Width="32" Height="32" Background="Transparent" BorderBrush="Transparent">
+                        <Viewbox Width="10" Height="10" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0 0 2 2">
+                            <Path Data="{StaticResource xBtnIcon}"
+                                Stroke="#e8e8e8"
+                                StrokeThickness="2"
+                                StrokeLineJoin="Round"
+                                Fill="Transparent" 
+                                HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Viewbox>
+                    </Button>
+                </StackPanel>
+            </Grid>
+
+            <TabControl WindowChrome.IsHitTestVisibleInChrome="True" x:Name="TabControl" PreviewMouseDown="TabControl_PreviewMouseDown" Background="Transparent" 
+                        BorderThickness="0" Grid.Row="0" Grid.RowSpan="2">
+                <TabItem HeaderTemplate="{DynamicResource TabHeaderTemplate}">
+                    <local:TabContent/>
+                </TabItem>
+                <TabItem Style="{DynamicResource NewTabItem}" x:Name="NewTabBtn" Header="+" PreviewMouseDown="TabItem_PreviewMouseDown"/>
+            </TabControl>
+
+        </Grid>
+
     </Grid>
+
+
 </Window>

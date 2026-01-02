@@ -1,0 +1,156 @@
+﻿<UserControl x:Class="Bongo.TabContent"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:cefSharp="clr-namespace:CefSharp.Wpf;assembly=CefSharp.Wpf"
+             xmlns:local="clr-namespace:Bongo"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition Width="2.5*"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition Height="25"></RowDefinition>
+            </Grid.RowDefinitions>
+            <!--#region toolbar -->
+            <!-- left column-->
+            <Grid>
+                <StackPanel HorizontalAlignment="Left" VerticalAlignment="Center" Orientation="Horizontal">
+                    <Button Height="35" Width="35" Padding="0" Margin="0,0,5,0" 
+                    BorderBrush="Transparent" BorderThickness="0" Background="Transparent" Click="Back_click">
+                        <Viewbox Width="20" Height="20" Margin="0 0 4 4 ">
+                            <Path
+                                Data="{StaticResource BackBtnIcon}"
+                                Stroke="#e8e8e8"
+                                StrokeThickness="2"
+                                StrokeLineJoin="Round"
+                                Fill="Transparent" 
+                                HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                        </Viewbox>
+                    </Button>
+                    <Button Click="Forward_Click" Height="35" Width="35" Padding="0" Margin="0,0,5,0" 
+                    BorderBrush="Transparent" BorderThickness="0" Background="Transparent">
+                        <Viewbox Width="20" Height="20"  Margin="0 0 4 4 ">
+                            <Path
+                                Data="{StaticResource ForwardBtnIcon}"
+                                Stroke="#e8e8e8"
+                                StrokeThickness="2"
+                                StrokeLineJoin="Round"
+                                Fill="Transparent" 
+                                HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                        </Viewbox>
+                    </Button>
+
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
+                    <Button Height="35" Width="35" Padding="0" Margin="0,0,5,0" 
+                    BorderBrush="Transparent" BorderThickness="0" Background="Transparent">
+                        <Viewbox Width="20" Height="20" Margin="0 0 1 1 ">
+                            <Path
+                                Data="{StaticResource starBtnIcon}"
+                                Stroke="#e8e8e8"
+                                StrokeThickness="2"
+                                StrokeLineJoin="Round"
+                                Fill="Transparent" 
+                                HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                        </Viewbox>
+                    </Button>
+                    <Button Height="35" Width="35" Padding="0" Margin="0,0,5,0" Click="HomeBtn_Click"
+                    BorderBrush="Transparent" BorderThickness="0" Background="Transparent">
+                        <Button.Content>
+                            <Viewbox Width="20" Height="20"  Margin="0 0 1 1 ">
+                                <Path
+                                Data="{StaticResource homeBtnIcon}"
+                                Stroke="#e8e8e8"
+                                StrokeThickness="2"
+                                StrokeLineJoin="Round"
+                                Fill="Transparent" 
+                                HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                            </Viewbox>
+                        </Button.Content>
+                    </Button>
+                </StackPanel>
+            </Grid>
+
+            <!-- centre column-->
+
+            <TextBox x:Name="AddressBar" Grid.Column="1" Margin="5,12,5,12" Padding="12 7 30 0" Background="#FF272629" Foreground="#c2c2c2">
+
+            </TextBox>
+
+            <Viewbox MouseLeftButtonUp="Viewbox_MouseLeftButtonUp" Width="20" Height="20" HorizontalAlignment="Right" Grid.Column="1" Margin="0,-3,10,0">
+                <Path
+                    Data="{StaticResource searchBtnIcon}"
+                    Stroke="#e8e8e8"
+                    StrokeThickness="2"
+                    StrokeLineJoin="Round"
+                    Fill="Transparent" 
+                    HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+            </Viewbox>
+
+            <!-- right column-->
+            <Grid Grid.Column="2">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center">
+                    <Button Height="35" Width="35" Padding="0" Margin="-3,0,0,0" Click="Reload_Click"
+                        BorderBrush="Transparent" BorderThickness="0" Background="Transparent">
+                        <Button.Content>
+                            <Viewbox Width="20" Height="20">
+                                <Path
+                                Data="{StaticResource refreshBtnIcon}"
+                                Stroke="#e8e8e8"
+                                StrokeThickness="2"
+                                StrokeLineJoin="Round"
+                                Fill="#e8e8e8" 
+                                HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                            </Viewbox>
+                        </Button.Content>
+                    </Button>
+                    <Button Height="35" Width="35" Padding="0" Margin="0,0,0,0" Click="CLoseTab_Click"
+                        BorderBrush="Transparent" BorderThickness="0" Background="Transparent">
+                        <Button.Content>
+                            <Viewbox Width="20" Height="20" Margin="0 0 3 3">
+                                <Path
+                                Data="{StaticResource CloseTabBtnIcon}"
+                                Stroke="#e8e8e8"
+                                StrokeThickness="2"
+                                StrokeLineJoin="Round"
+                                Fill="#e8e8e8" 
+                                HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                            </Viewbox>
+                        </Button.Content>
+                    </Button>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
+                    <Button Height="35" Width="35" Padding="0" Margin="0,0,5,0" 
+                        BorderBrush="Transparent" BorderThickness="0" Background="Transparent">
+                        <Button.Content>
+                            <Viewbox Width="20" Height="20"  Margin="0 0 3 4 ">
+                                <Path
+                                Data="{StaticResource menuBtnIcon}"
+                                Stroke="#e8e8e8"
+                                StrokeThickness="2"
+                                StrokeLineJoin="Round"
+                                Fill="Transparent" 
+                                HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                            </Viewbox>
+                        </Button.Content>
+                    </Button>
+                </StackPanel>
+            </Grid>
+            <!--#endregion-->
+
+
+        </Grid>
+        <cefSharp:ChromiumWebBrowser x:Name="Browser" Grid.Row="1" Address="https://www.google.com" Initialized="Browser_Initialized"></cefSharp:ChromiumWebBrowser>
+    </Grid>
+</UserControl>
