@@ -81,5 +81,17 @@ namespace Bongo
 
             return -1;
         }
+
+        public bool feltoltes(string lks)
+        {
+            bezaras();
+            if (megnyitas())
+            {
+                MySqlCommand c = new MySqlCommand(lks, kapcsolat);
+                int result = c.ExecuteNonQuery();
+                if (result >= 0) { return true; }
+            }
+            return false;
+        }
     }
 }

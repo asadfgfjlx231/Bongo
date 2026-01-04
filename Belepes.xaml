@@ -1,0 +1,40 @@
+﻿<Window x:Class="Bongo.Belepes"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Bongo"
+        mc:Ignorable="d"
+        Title="Belepes" Height="320" Width="400">
+    <Grid Background="DarkGray">
+        <Label Margin="0, 0, 0, 0" FontWeight="Bold" FontStyle="Normal" FontStretch="Medium"
+               FontSize="36" HorizontalContentAlignment="Center" VerticalAlignment="Top" Background="Black" Foreground="White">
+            Bongo belépés
+        </Label>
+
+
+        <Label Margin="10, 70, 270, 0" VerticalAlignment="Top" Height="30" VerticalContentAlignment="Center"
+               FontWeight="Bold" FontSize="14" HorizontalContentAlignment="Center">
+            Felhaszálónév:
+        </Label>
+        <TextBox x:Name="usernameInput" VerticalAlignment="Top" Margin="130, 70, 10, 0" Height="30"
+                 VerticalContentAlignment="Center" Background="Black" Foreground="White" FontWeight="Bold"></TextBox>
+
+        <Label Margin="10, 120, 270, 0" VerticalAlignment="Top" Height="30" VerticalContentAlignment="Center"
+               FontWeight="Bold" FontSize="14" HorizontalContentAlignment="Center">
+            Jelszó:
+        </Label>
+        <TextBox x:Name="passwordInput" VerticalAlignment="Top" Margin="130, 120, 10, 0" Height="30"
+                 VerticalContentAlignment="Center" Background="Black" Foreground="White" FontWeight="Bold"></TextBox>
+
+        <Button x:Name="bej_btn" VerticalAlignment="Top" Margin="10, 170, 10, 0" Height="40" FontWeight="Bold" FontSize="24"
+                VerticalContentAlignment="Center" Background="Black" Foreground="White" Click="bej_btn_Click">
+            Bejelentkezés
+        </Button>
+
+        <Button x:Name="reg_btn" VerticalAlignment="Top" Margin="10, 230, 10, 0" Height="40" FontWeight="Bold" FontSize="24"
+                VerticalContentAlignment="Center" Background="Black" Foreground="White" Click="reg_btn_Click">
+            Regisztráció
+        </Button>
+    </Grid>
+</Window>
