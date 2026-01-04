@@ -19,8 +19,11 @@ namespace Bongo
     /// </summary>
     public partial class Belepes : Window
     {
+        Adatbazis adatbazis;
         public Belepes()
         {
+            adatbazis = new Adatbazis();
+
             InitializeComponent();
         }
 
@@ -43,18 +46,20 @@ namespace Bongo
                 return;
             }
 
-            if (false) // Ha nem létezik a felhasználó az adatbázisban
+            if (adatbazis.egySzoveg($"SELECT name FROM users WHERE name='{username}';") == "hiba")
             {
                 MessageBox.Show("Ilyen nevű felhasználó nem létezik!!!");
                 return;
             }
 
-            if (false) // Ha nem jó a jelszó
+            string titkos = Titkositas.HashJelszo(password);
+            if (adatbazis.egySzoveg($"SELECT password FROM users WHERE name='{username}';") != titkos)
             {
                 MessageBox.Show("Hibás a jelszó!!!");
                 return;
             }
 
+            int id = adatbazis.egySzam($"SELECT id FROM users WHERE name='{username}';");
             MainWindow ablak = new MainWindow(); // Jövőbeli paraméter: felhasználó id-je
             ablak.Show();
             Hide();

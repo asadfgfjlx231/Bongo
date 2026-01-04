@@ -40,7 +40,7 @@ namespace Bongo
                 return;
             }
 
-            if (false) // Ha már létezik ilyen nevű felhasználó adatbázisban
+            if (adatbazis.egySzoveg($"SELECT name FROM users WHERE name='{username}';") != "hiba")
             {
                 MessageBox.Show("Ilyen nevű felhasználó már létezik!!!");
                 return;
@@ -58,8 +58,6 @@ namespace Bongo
                 return;
             }
 
-            //
-            // új fiók létrehozása adatbázisban
 
             string titkositott = Titkositas.HashJelszo(password);
             if (!adatbazis.feltoltes($"INSERT INTO users (name, password) VALUES ('{username}', '{titkositott}');"))
@@ -67,7 +65,6 @@ namespace Bongo
                 MessageBox.Show("Sikertelen regisztráció!! Probléma az adatbázisban!!!");
                 return;
             }
-            //
 
             MessageBox.Show("Sikeres regisztráció!!!");
 
