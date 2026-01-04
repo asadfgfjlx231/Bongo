@@ -66,6 +66,24 @@ namespace Bongo
             return "hiba";
         }
 
+        public int[] sokSzam(string lks)
+        {
+            bezaras();
+            if (megnyitas())
+            {
+                MySqlCommand c = new MySqlCommand(lks, kapcsolat);
+                MySqlDataReader olvaso = c.ExecuteReader();
+                List<int> eredmeny = new List<int>();
+                while (olvaso.Read())
+                {
+                    eredmeny.Add(Convert.ToInt32(olvaso[0]));
+                }
+                return eredmeny.ToArray();
+            }
+
+            return new int[] {};
+        }
+
         public int egySzam(string lks)
         {
             bezaras();
