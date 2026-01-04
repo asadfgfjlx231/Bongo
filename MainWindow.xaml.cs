@@ -21,6 +21,7 @@ namespace Bongo
 {
     public partial class MainWindow : Window
     {
+        int userId;
         private static IntPtr WindowProc(IntPtr hwnd, int msg, IntPtr wParam, IntPtr lParam, ref bool handled)
         {
             switch (msg)
@@ -163,8 +164,10 @@ namespace Bongo
 
 
 
-        public MainWindow()
+        public MainWindow(int id)
         {
+            userId = id;
+
             InitializeComponent();
 
             SourceInitialized += (s, e) =>

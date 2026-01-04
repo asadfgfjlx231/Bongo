@@ -60,7 +60,7 @@ namespace Bongo
             }
 
             int id = adatbazis.egySzam($"SELECT id FROM users WHERE name='{username}';");
-            MainWindow ablak = new MainWindow(); // Jövőbeli paraméter: felhasználó id-je
+            MainWindow ablak = new MainWindow(id); // Jövőbeli paraméter: felhasználó id-je
             ablak.Show();
             Hide();
         }
