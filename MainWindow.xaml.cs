@@ -15,12 +15,14 @@ using System.Runtime.InteropServices;
 using System.Windows.Media.Media3D;
 using System.Windows.Controls;
 using Org.BouncyCastle.Asn1.X509;
+using System.Windows.Threading;
 
 
 namespace Bongo
 {
     public partial class MainWindow : Window
     {
+        private DispatcherTimer idleTimer;
         int userId;
         private static IntPtr WindowProc(IntPtr hwnd, int msg, IntPtr wParam, IntPtr lParam, ref bool handled)
         {
@@ -186,6 +188,39 @@ namespace Bongo
 
             DwmSetWindowAttribute(hWnd, attribute, ref preference, sizeof(uint));
 
+            idleTimer = new DispatcherTimer
+            {
+                Interval = TimeSpan.FromMinutes(1)
+            };
+            idleTimer.Tick += IdleTimer_Tick;
+            idleTimer.Start();
+            this.PreviewMouseMove += naus; ; ;
+            this.PreviewKeyDown += ResetIdle; ;
+
+
+        }
+
+        private void ResetIdle(object sender, KeyEventArgs e)
+        {
+            idleTimer.Stop();
+            idleTimer.Start();
+        }
+
+        private void naus(object sender, MouseEventArgs e)
+        {
+            idleTimer.Stop();
+            idleTimer.Start();
+        }
+
+        private void IdleTimer_Tick(object sender, EventArgs e)
+        {
+
+            idleTimer.Stop();
+
+            var saver = new ScreensaverWindow();
+            saver.ShowDialog();
+
+            idleTimer.Start();
         }
 
         [DllImport("dwmapi.dll", CharSet = CharSet.Unicode, SetLastError = true)]

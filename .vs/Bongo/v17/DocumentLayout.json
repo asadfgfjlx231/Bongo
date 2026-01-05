@@ -1,28 +1,28 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\BJ\\Bongo\\",
+  "WorkspaceRootPath": "C:\\Users\\Acer\\Desktop\\sa\\Bongo\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{45559C8E-2A34-4450-97BF-1444E3D5E5AF}|Bongo.csproj|D:\\BJ\\Bongo\\MainWindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{45559C8E-2A34-4450-97BF-1444E3D5E5AF}|Bongo.csproj|solutionrelative:MainWindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{45559C8E-2A34-4450-97BF-1444E3D5E5AF}|Bongo.csproj|C:\\Users\\Acer\\Desktop\\sa\\Bongo\\MainWindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45559C8E-2A34-4450-97BF-1444E3D5E5AF}|Bongo.csproj|solutionrelative:MainWindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{45559C8E-2A34-4450-97BF-1444E3D5E5AF}|Bongo.csproj|D:\\BJ\\Bongo\\MainWindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{45559C8E-2A34-4450-97BF-1444E3D5E5AF}|Bongo.csproj|solutionrelative:MainWindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{45559C8E-2A34-4450-97BF-1444E3D5E5AF}|Bongo.csproj|c:\\users\\acer\\desktop\\sa\\bongo\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{45559C8E-2A34-4450-97BF-1444E3D5E5AF}|Bongo.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\3116TAN-04\\AppData\\Local\\Temp\\.vsdbgsrc\\3714f74b82eacc6cf8dcf1e32980b0908d4f8b447d25d4eb08ff1424a7b57c02\\ResourcePart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{45559C8E-2A34-4450-97BF-1444E3D5E5AF}|Bongo.csproj|d:\\bj\\bongo\\tabcontent.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{45559C8E-2A34-4450-97BF-1444E3D5E5AF}|Bongo.csproj|C:\\Users\\Acer\\Desktop\\sa\\Bongo\\tabcontent.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{45559C8E-2A34-4450-97BF-1444E3D5E5AF}|Bongo.csproj|solutionrelative:tabcontent.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{45559C8E-2A34-4450-97BF-1444E3D5E5AF}|Bongo.csproj|D:\\BJ\\Bongo\\tabcontent.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{45559C8E-2A34-4450-97BF-1444E3D5E5AF}|Bongo.csproj|C:\\Users\\Acer\\Desktop\\sa\\Bongo\\tabcontent.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{45559C8E-2A34-4450-97BF-1444E3D5E5AF}|Bongo.csproj|solutionrelative:tabcontent.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{45559C8E-2A34-4450-97BF-1444E3D5E5AF}|Bongo.csproj|D:\\BJ\\Bongo\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{45559C8E-2A34-4450-97BF-1444E3D5E5AF}|Bongo.csproj|C:\\Users\\Acer\\Desktop\\sa\\Bongo\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{45559C8E-2A34-4450-97BF-1444E3D5E5AF}|Bongo.csproj|solutionrelative:app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
@@ -36,11 +36,17 @@
           "SelectedChildIndex": 5,
           "Children": [
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "ResourcePart.cs",
               "DocumentMoniker": "C:\\Users\\3116TAN-04\\AppData\\Local\\Temp\\.vsdbgsrc\\3714f74b82eacc6cf8dcf1e32980b0908d4f8b447d25d4eb08ff1424a7b57c02\\ResourcePart.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\3116TAN-04\\AppData\\Local\\Temp\\.vsdbgsrc\\3714f74b82eacc6cf8dcf1e32980b0908d4f8b447d25d4eb08ff1424a7b57c02\\ResourcePart.cs",
               "ToolTip": "C:\\Users\\3116TAN-04\\AppData\\Local\\Temp\\.vsdbgsrc\\3714f74b82eacc6cf8dcf1e32980b0908d4f8b447d25d4eb08ff1424a7b57c02\\ResourcePart.cs [Read Only]",
+              "RelativeToolTip": "..\\..\\..\\..\\3116TAN-04\\AppData\\Local\\Temp\\.vsdbgsrc\\3714f74b82eacc6cf8dcf1e32980b0908d4f8b447d25d4eb08ff1424a7b57c02\\ResourcePart.cs [Read Only]",
               "ViewState": "AgIAABoAAAAAAAAAAADwvysAAAAEAAAAAQAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-05T07:53:53.812Z",
@@ -50,9 +56,9 @@
               "$type": "Document",
               "DocumentIndex": 4,
               "Title": "TabContent.xaml.cs",
-              "DocumentMoniker": "D:\\BJ\\Bongo\\TabContent.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Acer\\Desktop\\sa\\Bongo\\TabContent.xaml.cs",
               "RelativeDocumentMoniker": "TabContent.xaml.cs",
-              "ToolTip": "D:\\BJ\\Bongo\\TabContent.xaml.cs",
+              "ToolTip": "C:\\Users\\Acer\\Desktop\\sa\\Bongo\\TabContent.xaml.cs",
               "RelativeToolTip": "TabContent.xaml.cs",
               "ViewState": "AgIAAMcAAAAAAAAAAAAAAOEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -62,9 +68,9 @@
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "TabContent.xaml",
-              "DocumentMoniker": "D:\\BJ\\Bongo\\TabContent.xaml",
+              "DocumentMoniker": "C:\\Users\\Acer\\Desktop\\sa\\Bongo\\TabContent.xaml",
               "RelativeDocumentMoniker": "TabContent.xaml",
-              "ToolTip": "D:\\BJ\\Bongo\\TabContent.xaml",
+              "ToolTip": "C:\\Users\\Acer\\Desktop\\sa\\Bongo\\TabContent.xaml",
               "RelativeToolTip": "TabContent.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2026-01-02T14:05:57.596Z",
@@ -74,9 +80,9 @@
               "$type": "Document",
               "DocumentIndex": 5,
               "Title": "App.xaml",
-              "DocumentMoniker": "D:\\BJ\\Bongo\\App.xaml",
+              "DocumentMoniker": "C:\\Users\\Acer\\Desktop\\sa\\Bongo\\App.xaml",
               "RelativeDocumentMoniker": "App.xaml",
-              "ToolTip": "D:\\BJ\\Bongo\\App.xaml",
+              "ToolTip": "C:\\Users\\Acer\\Desktop\\sa\\Bongo\\App.xaml",
               "RelativeToolTip": "App.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2026-01-02T13:54:23.101Z",
@@ -84,24 +90,24 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "D:\\BJ\\Bongo\\MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Acer\\Desktop\\sa\\Bongo\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "MainWindow.xaml.cs",
-              "ToolTip": "D:\\BJ\\Bongo\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\Acer\\Desktop\\sa\\Bongo\\MainWindow.xaml.cs",
               "RelativeToolTip": "MainWindow.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAA2AAAAAAAAAA==",
+              "ViewState": "AgIAAMUAAAAAAAAAAAAAANsAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-02T13:05:26.794Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "MainWindow.xaml",
-              "DocumentMoniker": "D:\\BJ\\Bongo\\MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\Acer\\Desktop\\sa\\Bongo\\MainWindow.xaml",
               "RelativeDocumentMoniker": "MainWindow.xaml",
-              "ToolTip": "D:\\BJ\\Bongo\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\Acer\\Desktop\\sa\\Bongo\\MainWindow.xaml",
               "RelativeToolTip": "MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2026-01-02T12:57:04.418Z",
