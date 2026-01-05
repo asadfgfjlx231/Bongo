@@ -2,6 +2,7 @@
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Shapes;
@@ -13,6 +14,7 @@ namespace Bongo
     {
         private Random rnd = new Random();
         bool canExit = false;
+        Point lastMousePos;
 
         public ScreensaverWindow()
         {
@@ -21,14 +23,28 @@ namespace Bongo
             Loaded += async (_, __) =>
             {
                 await Dispatcher.InvokeAsync(CreateAnimation, DispatcherPriority.Render);
-
                 await Task.Delay(500);
+
+                lastMousePos = Mouse.GetPosition(this);
                 canExit = true;
             };
 
             KeyDown += ExitIfAllowed;
-            MouseMove += ExitIfAllowed;
+            MouseMove += OnMouseMove;
             MouseDown += ExitIfAllowed;
+        }
+        private void OnMouseMove(object sender, System.Windows.Input.MouseEventArgs e)
+        {
+            if (!canExit)
+                return;
+
+            var currentPos = e.GetPosition(this);
+
+            if (Math.Abs(currentPos.X - lastMousePos.X) > 3 ||
+                Math.Abs(currentPos.Y - lastMousePos.Y) > 3)
+            {
+                Close();
+            }
         }
         private void ExitIfAllowed(object sender, EventArgs e)
         {
