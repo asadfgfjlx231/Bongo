@@ -62,9 +62,15 @@ namespace Bongo
 
         public void torles(int id)
         {
-            MessageBox.Show($"Törlés: {id}");
+            if (!adatbazis.feltoltes($"DELETE FROM favourites WHERE id={id};"))
+            {
+                MessageBox.Show("Törlés sikertelen!!");
+                return;
+            }
 
+            MessageBox.Show("Sikeresen törölve!!");
 
+            ujratoltes();
         }
 
         private void ujratoltes()
