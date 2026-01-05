@@ -18,6 +18,13 @@ using System.Net.Http;
 using System.Windows.Interop;
 using System.Runtime.InteropServices;
 using System.Windows.Media.Media3D;
+<<<<<<< Updated upstream
+=======
+using System.Windows.Controls;
+using Org.BouncyCastle.Asn1.X509;
+using System.Windows.Threading;
+
+>>>>>>> Stashed changes
 
 namespace Bongo
 {
@@ -26,6 +33,7 @@ namespace Bongo
     /// </summary>
     public partial class MainWindow : Window
     {
+        private DispatcherTimer idleTimer;
         private static IntPtr WindowProc(IntPtr hwnd, int msg, IntPtr wParam, IntPtr lParam, ref bool handled)
         {
             switch (msg)
@@ -195,9 +203,45 @@ namespace Bongo
             var preference = DWM_WINDOW_CORNER_PREFERENCE.DWMWCP_ROUND;
 
             DwmSetWindowAttribute(hWnd, attribute, ref preference, sizeof(uint));
+            idleTimer = new DispatcherTimer
+            {
+                Interval = TimeSpan.FromMinutes(1)
+            };
+            idleTimer.Tick += IdleTimer_Tick;
+            idleTimer.Start();
 
+<<<<<<< Updated upstream
 
             Browser.AddressChanged += Browser_AddressChanged;
+=======
+            // aktivitás figyelése
+            this.PreviewMouseMove += naus; ;
+            this.PreviewKeyDown += ResetIdle;
+
+        }
+
+        private void naus(object sender, MouseEventArgs e)
+        {
+            idleTimer.Stop();
+            idleTimer.Start();
+        }
+
+        private void ResetIdle(object sender, KeyEventArgs e)
+        {
+            idleTimer.Stop();
+            idleTimer.Start();
+        }
+
+
+        private void IdleTimer_Tick(object sender, EventArgs e)
+        {
+            idleTimer.Stop();
+
+            var saver = new ScreensaverWindow();
+            saver.ShowDialog();
+
+            idleTimer.Start();
+>>>>>>> Stashed changes
         }
 
         [DllImport("dwmapi.dll", CharSet = CharSet.Unicode, SetLastError = true)]

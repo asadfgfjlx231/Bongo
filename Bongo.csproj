@@ -69,6 +69,13 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+<<<<<<< Updated upstream
+=======
+    <Compile Include="MinusConverter.cs" />
+    <Compile Include="ScreensaverWindow.xaml.cs">
+      <DependentUpon>ScreensaverWindow.xaml</DependentUpon>
+    </Compile>
+>>>>>>> Stashed changes
     <Compile Include="TabContent.xaml.cs">
       <DependentUpon>TabContent.xaml</DependentUpon>
     </Compile>
@@ -88,6 +95,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="ScreensaverWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="TabContent.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
