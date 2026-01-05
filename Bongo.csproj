@@ -118,7 +118,13 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Belepes.xaml.cs">
+      <DependentUpon>Belepes.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MinusConverter.cs" />
+    <Compile Include="Regisztracio.xaml.cs">
+      <DependentUpon>Regisztracio.xaml</DependentUpon>
+    </Compile>
     <Compile Include="TabContent.xaml.cs">
       <DependentUpon>TabContent.xaml</DependentUpon>
     </Compile>
@@ -127,6 +133,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Compile Include="Titkositas.cs" />
+    <Page Include="Belepes.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -139,6 +149,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Regisztracio.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="TabContent.xaml">
       <SubType>Designer</SubType>
     </Page>
