@@ -153,8 +153,7 @@ namespace Bongo
 
         private void Reload_Click(object sender, RoutedEventArgs e)
         {
-            if (Browser.CanGoBack)
-                Browser.Back();
+            Browser.Reload();
         }
 
         private static T FindParent<T>(DependencyObject child) where T : DependencyObject
@@ -196,30 +195,5 @@ namespace Bongo
             parent?.OpenChromeMenu(sender as UIElement);
 
         }
-
-
-
-
-        /*
-        private void Stop_Click(object sender, RoutedEventArgs e)
-        {
-            var core = Browser.GetBrowser();
-            if (core == null)
-                return;
-
-            try
-            {
-                // 1) Chromium motor betöltés megállítása
-                core.StopLoad();
-
-                // 2) JS oldali stop (Chrome is ezt hívja)
-                Browser.ExecuteScriptAsync("window.stop();");
-
-                // 3) Aktív hálózati kapcsolatok megszakítása
-                core.GetHost().WasResized();
-            }
-            catch { }
-        }
-        */
     }
 }
